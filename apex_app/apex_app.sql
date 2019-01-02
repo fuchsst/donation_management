@@ -27,7 +27,7 @@ prompt APPLICATION 55440 - Donation Management
 -- Application Export:
 --   Application:     55440
 --   Name:            Donation Management
---   Date and Time:   10:21 Thursday November 8, 2018
+--   Date and Time:   12:21 Friday November 16, 2018
 --   Exported By:     FUCHSST@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -36,14 +36,14 @@ prompt APPLICATION 55440 - Donation Management
 --
 
 -- Application Statistics:
---   Pages:                     48
---     Items:                  116
+--   Pages:                     53
+--     Items:                  135
 --     Computations:             2
 --     Validations:              3
---     Processes:               80
---     Regions:                121
---     Buttons:                 77
---     Dynamic Actions:         26
+--     Processes:               81
+--     Regions:                139
+--     Buttons:                 78
+--     Dynamic Actions:         27
 --   Shared Components:
 --     Logic:
 --       Items:                  1
@@ -52,7 +52,7 @@ prompt APPLICATION 55440 - Donation Management
 --     Navigation:
 --       Lists:                  8
 --       Breadcrumbs:            1
---         Entries:             12
+--         Entries:             16
 --     Security:
 --       Authentication:         1
 --       Authorization:          3
@@ -69,13 +69,13 @@ prompt APPLICATION 55440 - Donation Management
 --         Breadcrumb:           1
 --         Button:               3
 --         Report:              10
---       LOVs:                  17
+--       LOVs:                  18
 --       Shortcuts:              1
 --     Globalization:
 --     Reports:
 --     E-Mail:
 --   Supporting Objects:  Included
---     Install scripts:          2
+--     Install scripts:          7
 --     Validations:              1
 
 prompt --application/delete_application
@@ -128,7 +128,7 @@ wwv_flow_api.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Donation Management'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181108100900'
+,p_last_upd_yyyymmddhh24miss=>'20181116122033'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>3
 ,p_ui_type_name => null
@@ -262,7 +262,7 @@ wwv_flow_api.create_list(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(21450497496996980888)
-,p_list_item_display_sequence=>1
+,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Home'
 ,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-home'
@@ -270,7 +270,7 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(1515539598358285944)
-,p_list_item_display_sequence=>10
+,p_list_item_display_sequence=>20
 ,p_list_item_link_text=>'Donators'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-user-heart'
@@ -279,7 +279,7 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(1941846283229488765)
-,p_list_item_display_sequence=>20
+,p_list_item_display_sequence=>30
 ,p_list_item_link_text=>'Kids'
 ,p_list_item_link_target=>'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-child'
@@ -288,7 +288,7 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(2216078322862796352)
-,p_list_item_display_sequence=>30
+,p_list_item_display_sequence=>40
 ,p_list_item_link_text=>'Manage Kids/Schools'
 ,p_list_item_link_target=>'f?p=&APP_ID.:30:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-star-o'
@@ -297,7 +297,7 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(2383670845459031117)
-,p_list_item_display_sequence=>40
+,p_list_item_display_sequence=>50
 ,p_list_item_link_text=>'Donations'
 ,p_list_item_link_target=>'f?p=&APP_ID.:40:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-sign-in'
@@ -306,7 +306,7 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(2813938323039510142)
-,p_list_item_display_sequence=>50
+,p_list_item_display_sequence=>60
 ,p_list_item_link_text=>'Conversions'
 ,p_list_item_link_target=>'f?p=&APP_ID.:50:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-exchange'
@@ -315,7 +315,7 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(2820920929261962944)
-,p_list_item_display_sequence=>60
+,p_list_item_display_sequence=>70
 ,p_list_item_link_text=>'Expenditures'
 ,p_list_item_link_target=>'f?p=&APP_ID.:60:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-sign-out'
@@ -324,16 +324,52 @@ wwv_flow_api.create_list_item(
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(3193779154351540896)
-,p_list_item_display_sequence=>70
+,p_list_item_display_sequence=>80
 ,p_list_item_link_text=>'Reports'
 ,p_list_item_link_target=>'f?p=&APP_ID.:70:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-range-chart-area'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
-,p_list_item_current_for_pages=>'70'
+,p_list_item_current_for_pages=>'70,71,72,73,73,74'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(9728522254006311783)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>'Accounts Overview'
+,p_list_item_link_target=>'f?p=&APP_ID.:71:&SESSION.::&DEBUG.'
+,p_parent_list_item_id=>wwv_flow_api.id(3193779154351540896)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'71'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(10204878870465628822)
+,p_list_item_display_sequence=>110
+,p_list_item_link_text=>'Donators Overview'
+,p_list_item_link_target=>'f?p=&APP_ID.:74:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_api.id(3193779154351540896)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'74'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(9750981748534842342)
+,p_list_item_display_sequence=>120
+,p_list_item_link_text=>'Expenditure Overview'
+,p_list_item_link_target=>'f?p=&APP_ID.:73:&SESSION.::&DEBUG.::::'
+,p_parent_list_item_id=>wwv_flow_api.id(3193779154351540896)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'73'
+);
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(9742146105833501856)
+,p_list_item_display_sequence=>130
+,p_list_item_link_text=>'Kids Overview'
+,p_list_item_link_target=>'f?p=&APP_ID.:72:&SESSION.::&DEBUG.'
+,p_parent_list_item_id=>wwv_flow_api.id(3193779154351540896)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'72'
 );
 wwv_flow_api.create_list_item(
  p_id=>wwv_flow_api.id(21450632781599981197)
-,p_list_item_display_sequence=>1000
+,p_list_item_display_sequence=>90
 ,p_list_item_link_text=>'Administration'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10000:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-user-wrench'
@@ -985,6 +1021,19 @@ wwv_flow_api.create_static_lov_data(
 );
 end;
 /
+prompt --application/shared_components/user_interface/lovs/purposes
+begin
+wwv_flow_api.create_list_of_values(
+ p_id=>wwv_flow_api.id(8133278814691393987)
+,p_lov_name=>'PURPOSES'
+,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select NAME, PURPOSE_ID',
+'from PURPOSE',
+'where PROJECT_ID = :APP_PROJECT_ID',
+'order by 1'))
+);
+end;
+/
 prompt --application/shared_components/user_interface/lovs/regions
 begin
 wwv_flow_api.create_list_of_values(
@@ -1145,6 +1194,34 @@ wwv_flow_api.create_menu_option(
 ,p_short_name=>'Reports'
 ,p_link=>'f?p=&APP_ID.:70:&SESSION.'
 ,p_page_id=>70
+);
+wwv_flow_api.create_menu_option(
+ p_id=>wwv_flow_api.id(9728528641898311795)
+,p_parent_id=>wwv_flow_api.id(3193780087825540900)
+,p_short_name=>'Accounts Overview'
+,p_link=>'f?p=&APP_ID.:71:&SESSION.'
+,p_page_id=>71
+);
+wwv_flow_api.create_menu_option(
+ p_id=>wwv_flow_api.id(9742147215875501859)
+,p_parent_id=>wwv_flow_api.id(3193780087825540900)
+,p_short_name=>'Kids Overview'
+,p_link=>'f?p=&APP_ID.:72:&SESSION.'
+,p_page_id=>72
+);
+wwv_flow_api.create_menu_option(
+ p_id=>wwv_flow_api.id(9750992628197842362)
+,p_parent_id=>wwv_flow_api.id(3193780087825540900)
+,p_short_name=>'Expenditure Overview'
+,p_link=>'f?p=&APP_ID.:73:&SESSION.'
+,p_page_id=>73
+);
+wwv_flow_api.create_menu_option(
+ p_id=>wwv_flow_api.id(10204879946269628825)
+,p_parent_id=>wwv_flow_api.id(3193780087825540900)
+,p_short_name=>'Donators Overview'
+,p_link=>'f?p=&APP_ID.:74:&SESSION.'
+,p_page_id=>74
 );
 wwv_flow_api.create_menu_option(
  p_id=>wwv_flow_api.id(21450354173879980780)
@@ -10776,7 +10853,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181105090001'
+,p_last_upd_yyyymmddhh24miss=>'20181109104059'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(1515540091166285945)
@@ -11047,7 +11124,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181011205259'
+,p_last_upd_yyyymmddhh24miss=>'20181116121723'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(1583385600559521396)
@@ -11200,8 +11277,9 @@ wwv_flow_api.create_report_region(
 '       TRANSACTION_CODE,',
 '       PAYMENT_METHOD.NAME PAYMENT_METHOD,',
 '       PURPOSE.NAME PURPOSE,',
-'       AMOUNT_SEND',
+'       AB.AMOUNT AMOUNT_SEND',
 'from RECEIVED_MONEY',
+'join ACCOUNT_BOOKING AB on RECEIVED_MONEY.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
 'join PAYMENT_METHOD on RECEIVED_MONEY.PAYMENT_METHOD_ID=PAYMENT_METHOD.PAYMENT_METHOD_ID',
 'join PURPOSE on RECEIVED_MONEY.PURPOSE_ID=PURPOSE.PURPOSE_ID',
 'WHERE RECEIVED_MONEY.DONATOR_ID=:P11_DONATOR_ID'))
@@ -12290,7 +12368,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181017162837'
+,p_last_upd_yyyymmddhh24miss=>'20181109102950'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(1941846785759488766)
@@ -12543,7 +12621,7 @@ wwv_flow_api.create_worksheet_rpt(
  p_id=>wwv_flow_api.id(1941897137256512842)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
-,p_report_alias=>'19418972'
+,p_report_alias=>'KIDS'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
 ,p_report_columns=>'KID_NUMBER:SURNAME:FORENAME:BIRTHDAY:GENDER:IN_PROGRAM_FROM:REGION:DONATOR_NAME:SCHOOL_NAME:GRADE:'
@@ -12589,7 +12667,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181017155743'
+,p_last_upd_yyyymmddhh24miss=>'20181116122033'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2094293583081048133)
@@ -12670,8 +12748,9 @@ wwv_flow_api.create_report_region(
 '       RECEIVED_MONEY.TRANSACTION_CODE,',
 '       PAYMENT_METHOD.NAME PAYMENT_METHOD,',
 '       PURPOSE.NAME PURPOSE,',
-'       RECEIVED_MONEY.AMOUNT_SEND',
+'       AB.AMOUNT AMOUNT_SEND',
 'from RECEIVED_MONEY',
+'join ACCOUNT_BOOKING AB on RECEIVED_MONEY.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
 'join RECEIVED_MONEY_KID_DISTR on RECEIVED_MONEY.RECEIVED_MONEY_ID= RECEIVED_MONEY_KID_DISTR. RECEIVED_MONEY_ID',
 'join KID_IN_PROGRAM on RECEIVED_MONEY_KID_DISTR.KID_IN_PROGRAM_ID=KID_IN_PROGRAM.KID_IN_PROGRAM_ID',
 'join PAYMENT_METHOD on RECEIVED_MONEY.PAYMENT_METHOD_ID=PAYMENT_METHOD.PAYMENT_METHOD_ID',
@@ -15991,7 +16070,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181022162329'
+,p_last_upd_yyyymmddhh24miss=>'20181109103036'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2383671325523031118)
@@ -16008,7 +16087,6 @@ wwv_flow_api.create_page_plug(
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2383671903281031123)
 ,p_plug_name=>'Donations'
-,p_region_name=>'DONATIONS'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_api.id(21450409456646980811)
 ,p_plug_display_sequence=>10
@@ -16202,7 +16280,7 @@ wwv_flow_api.create_worksheet_rpt(
  p_id=>wwv_flow_api.id(2383878223908055281)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
-,p_report_alias=>'23838783'
+,p_report_alias=>'DONATIONS'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
 ,p_report_columns=>'RECEIVED_DATE:TRANSACTION_CODE:DONATOR_NAME:FEE:AMOUNT:ACCOUNT:PURPOSE:PAYMENT_METHOD:KIDS_NAME:CUM_DONATIONS'
@@ -17421,7 +17499,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181105101114'
+,p_last_upd_yyyymmddhh24miss=>'20181108155825'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2816644233531725491)
@@ -17687,9 +17765,15 @@ wwv_flow_api.create_page_item(
 ,p_display_as=>'NATIVE_DISPLAY_ONLY'
 ,p_field_template=>wwv_flow_api.id(21450462195675980845)
 ,p_item_template_options=>'#DEFAULT#'
+,p_required_patch=>wwv_flow_api.id(3681022125814919350)
 ,p_attribute_01=>'Y'
-,p_attribute_02=>'VALUE'
-,p_attribute_04=>'Y'
+,p_attribute_02=>'PLSQL'
+,p_attribute_03=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'if (:P51_FROM_AB_AMOUNT>0) then',
+'   htp.p(:P51_TO_AB_AMOUNT/:P51_FROM_AB_AMOUNT);',
+'else',
+'    htp.p(0);',
+'end if;'))
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(2816687731525725548)
@@ -17885,6 +17969,30 @@ wwv_flow_api.create_page_item(
 ,p_item_template_options=>'#DEFAULT#'
 ,p_attribute_03=>'right'
 );
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(7764353122629508033)
+,p_name=>'P51_MAIN_PURPOSE_ID'
+,p_item_sequence=>190
+,p_item_plug_id=>wwv_flow_api.id(2796873154239483524)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Main Purpose'
+,p_source=>'MAIN_PURPOSE_ID'
+,p_source_type=>'DB_COLUMN'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_named_lov=>'PURPOSES'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select NAME, PURPOSE_ID',
+'from PURPOSE',
+'where PROJECT_ID = :APP_PROJECT_ID',
+'order by 1'))
+,p_lov_display_null=>'YES'
+,p_cHeight=>1
+,p_field_template=>wwv_flow_api.id(21450462195675980845)
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+);
 wwv_flow_api.create_page_da_event(
  p_id=>wwv_flow_api.id(2816645494407725492)
 ,p_name=>'Cancel Dialog'
@@ -17922,27 +18030,12 @@ wwv_flow_api.create_page_da_action(
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
-,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'if (:P51_FROM_AB_AMOUNT>0) then',
-'    :P51_CONVERSION_RATE := :P51_TO_AB_AMOUNT/:P51_FROM_AB_AMOUNT;',
-'else',
-'    :P51_CONVERSION_RATE := 0;',
-'end if;'))
+,p_attribute_01=>'null;'
 ,p_attribute_02=>'P51_FROM_AB_AMOUNT,P51_TO_AB_AMOUNT'
 ,p_attribute_03=>'P51_CONVERSION_RATE'
-,p_attribute_04=>'N'
+,p_attribute_04=>'Y'
 ,p_stop_execution_on_error=>'Y'
 ,p_wait_for_result=>'Y'
-);
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(3060563985799668014)
-,p_event_id=>wwv_flow_api.id(3060563897489668013)
-,p_event_result=>'TRUE'
-,p_action_sequence=>20
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_REFRESH'
-,p_affected_elements_type=>'ITEM'
-,p_affected_elements=>'P51_CONVERSION_RATE'
 );
 wwv_flow_api.create_page_process(
  p_id=>wwv_flow_api.id(2816691643505725554)
@@ -18168,7 +18261,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181106121237'
+,p_last_upd_yyyymmddhh24miss=>'20181109102832'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2820921427522962945)
@@ -18193,6 +18286,8 @@ wwv_flow_api.create_page_plug(
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select EXPENSE.EXPENSE_ID as EXPENSE_ID,',
 '    EXPENSE.EXPENSE_DATE as EXPENSE_DATE,',
+'    nvl(EXPENSE.IS_RESERVED, ''N'') IS_RESERVED,',
+'    case when APPROVED_BY is not null then ''checked'' else '''' end IS_APPROVED,',
 '    CAMPAIGN.NAME as CAMPAIGN,',
 '    PURPOSE.NAME as PURPOSE,',
 '    EXPENDITURE_TYPE.NAME as EXPENDITURE_TYPE,',
@@ -18200,8 +18295,7 @@ wwv_flow_api.create_page_plug(
 '    ACCOUNT_BOOKING.AMOUNT as AMOUNT,',
 '    CURRENCY.CODE as CURRENCY_CODE,',
 '    CURRENCY.SYMBOL as CURRENCY_SYMBOL,',
-'    sum(ACCOUNT_BOOKING.AMOUNT) over (partition by ACCOUNT_BOOKING.ACCOUNT_ID order by EXPENSE.EXPENSE_DATE) CUM_EXPENDITURES,',
-'    PURPOSE.COLOR_CODE',
+'    case when nvl(EXPENSE.IS_RESERVED, ''N'')=''Y'' then ''#BBBBBB'' else PURPOSE.COLOR_CODE end COLOR_CODE ',
 'from EXPENSE ',
 'join EXPENDITURE_TYPE on EXPENSE.EXPENDITURE_TYPE_ID=EXPENDITURE_TYPE.EXPENDITURE_TYPE_ID',
 'join PURPOSE on EXPENDITURE_TYPE.PURPOSE_ID=PURPOSE.PURPOSE_ID',
@@ -18225,8 +18319,8 @@ wwv_flow_api.create_worksheet(
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'NONE'
 ,p_show_detail_link=>'N'
-,p_show_select_columns=>'N'
 ,p_show_rows_per_page=>'N'
+,p_show_sort=>'N'
 ,p_show_control_break=>'N'
 ,p_show_highlight=>'N'
 ,p_show_computation=>'N'
@@ -18259,6 +18353,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_display_order=>12
 ,p_column_identifier=>'I'
 ,p_column_label=>'Campaign'
+,p_allow_sorting=>'N'
 ,p_allow_highlighting=>'N'
 ,p_allow_ctrl_breaks=>'N'
 ,p_allow_aggregations=>'N'
@@ -18276,6 +18371,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_identifier=>'D'
 ,p_column_label=>'Purpose'
 ,p_column_html_expression=>'<span class="color-code" style="display:none">#COLOR_CODE#</span>#PURPOSE#'
+,p_allow_sorting=>'N'
 ,p_allow_highlighting=>'N'
 ,p_allow_ctrl_breaks=>'N'
 ,p_allow_aggregations=>'N'
@@ -18294,6 +18390,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_display_order=>32
 ,p_column_identifier=>'E'
 ,p_column_label=>'Expenditure Type'
+,p_allow_sorting=>'N'
 ,p_allow_highlighting=>'N'
 ,p_allow_ctrl_breaks=>'N'
 ,p_allow_aggregations=>'N'
@@ -18312,6 +18409,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_display_order=>42
 ,p_column_identifier=>'F'
 ,p_column_label=>'Account'
+,p_allow_sorting=>'N'
 ,p_allow_highlighting=>'N'
 ,p_allow_ctrl_breaks=>'N'
 ,p_allow_aggregations=>'N'
@@ -18330,6 +18428,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_identifier=>'G'
 ,p_column_label=>'Amount'
 ,p_column_html_expression=>'#CURRENCY_SYMBOL# #AMOUNT#'
+,p_allow_sorting=>'N'
 ,p_allow_highlighting=>'N'
 ,p_allow_ctrl_breaks=>'N'
 ,p_allow_aggregations=>'N'
@@ -18360,6 +18459,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_label=>'Expense Date'
 ,p_column_link=>'f?p=&APP_ID.:61:&SESSION.::&DEBUG.:RP,61:P61_EXPENSE_ID:#EXPENSE_ID#'
 ,p_column_linktext=>'#EXPENSE_DATE#'
+,p_allow_sorting=>'N'
 ,p_allow_highlighting=>'N'
 ,p_allow_ctrl_breaks=>'N'
 ,p_allow_aggregations=>'N'
@@ -18382,17 +18482,6 @@ wwv_flow_api.create_worksheet_column(
 ,p_display_text_as=>'HIDDEN'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(3558708425472751923)
-,p_db_column_name=>'CUM_EXPENDITURES'
-,p_display_order=>92
-,p_column_identifier=>'N'
-,p_column_label=>'cumulated Exp.'
-,p_column_html_expression=>'#CURRENCY_SYMBOL# #CUM_EXPENDITURES#'
-,p_column_type=>'NUMBER'
-,p_column_alignment=>'RIGHT'
-,p_format_mask=>'999G999G999G999G990D00'
-);
-wwv_flow_api.create_worksheet_column(
  p_id=>wwv_flow_api.id(4613952730054197634)
 ,p_db_column_name=>'COLOR_CODE'
 ,p_display_order=>102
@@ -18402,14 +18491,43 @@ wwv_flow_api.create_worksheet_column(
 ,p_display_text_as=>'HIDDEN'
 ,p_static_id=>'COLOR_CODE'
 );
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(7764352909070508031)
+,p_db_column_name=>'IS_RESERVED'
+,p_display_order=>112
+,p_column_identifier=>'P'
+,p_column_label=>'Is Reserved'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(7764353098023508032)
+,p_db_column_name=>'IS_APPROVED'
+,p_display_order=>122
+,p_column_identifier=>'Q'
+,p_column_label=>'Approved'
+,p_column_html_expression=>'<input type="checkbox" #IS_APPROVED# disabled="true" value="#IS_APPROVED#">'
+,p_allow_sorting=>'N'
+,p_allow_highlighting=>'N'
+,p_allow_ctrl_breaks=>'N'
+,p_allow_aggregations=>'N'
+,p_allow_computations=>'N'
+,p_allow_charting=>'N'
+,p_allow_group_by=>'N'
+,p_allow_pivot=>'N'
+,p_allow_hide=>'N'
+,p_column_type=>'STRING'
+,p_column_alignment=>'CENTER'
+,p_rpt_show_filter_lov=>'N'
+);
 wwv_flow_api.create_worksheet_rpt(
  p_id=>wwv_flow_api.id(2822886654157074529)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
-,p_report_alias=>'28228867'
+,p_report_alias=>'EXPENDITURES'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
-,p_report_columns=>'EXPENSE_DATE:CAMPAIGN:PURPOSE:EXPENDITURE_TYPE:ACCOUNT:AMOUNT::CUM_EXPENDITURES:COLOR_CODE'
+,p_report_columns=>'EXPENSE_DATE:CAMPAIGN:PURPOSE:EXPENDITURE_TYPE:ACCOUNT:AMOUNT::COLOR_CODE:IS_RESERVED:IS_APPROVED'
 ,p_sort_column_1=>'EXPENSE_DATE'
 ,p_sort_direction_1=>'DESC'
 ,p_sort_column_2=>'CAMPAIGN'
@@ -18482,7 +18600,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181105102003'
+,p_last_upd_yyyymmddhh24miss=>'20181109101703'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2822275266619033214)
@@ -19169,6 +19287,71 @@ wwv_flow_api.create_page_item(
 ,p_attribute_08=>'attachment'
 ,p_attribute_11=>'image/*'
 );
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(7764352495339508026)
+,p_name=>'P61_IS_RESERVED'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(2822275266619033214)
+,p_use_cache_before_default=>'NO'
+,p_item_default=>'N'
+,p_prompt=>'Reserved Budget'
+,p_source=>'IS_RESERVED'
+,p_source_type=>'DB_COLUMN'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>'STATIC:budget;Y,expenditure;N'
+,p_cHeight=>1
+,p_display_when=>'P61_APPROVED_BY'
+,p_display_when_type=>'ITEM_IS_NULL'
+,p_field_template=>wwv_flow_api.id(21450461932939980845)
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(7764352506241508027)
+,p_name=>'P61_IS_APPROVED'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_api.id(2822275266619033214)
+,p_prompt=>'Is Approved'
+,p_source=>'case when :P61_APPROVED_BY is not null and :P61_APPROVED_ON is not null then ''Y'' else ''N'' end'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>'STATIC:checked;Y,waiting for approval;N'
+,p_cHeight=>1
+,p_begin_on_new_line=>'N'
+,p_grid_column=>8
+,p_display_when=>'P61_IS_RESERVED'
+,p_display_when2=>'Y'
+,p_display_when_type=>'VAL_OF_ITEM_IN_COND_NOT_EQ_COND2'
+,p_field_template=>wwv_flow_api.id(21450461932939980845)
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(7764352630320508028)
+,p_name=>'P61_APPROVED_BY'
+,p_item_sequence=>100
+,p_item_plug_id=>wwv_flow_api.id(2796873844259483531)
+,p_use_cache_before_default=>'NO'
+,p_source=>'APPROVED_BY'
+,p_source_type=>'DB_COLUMN'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(7764352752575508029)
+,p_name=>'P61_APPROVED_ON'
+,p_item_sequence=>110
+,p_item_plug_id=>wwv_flow_api.id(2796873844259483531)
+,p_use_cache_before_default=>'NO'
+,p_source=>'APPROVED_ON'
+,p_source_type=>'DB_COLUMN'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
 wwv_flow_api.create_page_da_event(
  p_id=>wwv_flow_api.id(2822286440357033215)
 ,p_name=>'Cancel Dialog'
@@ -19216,8 +19399,26 @@ wwv_flow_api.create_page_process(
 ,p_process_when_button_id=>wwv_flow_api.id(2822285633628033215)
 );
 wwv_flow_api.create_page_process(
- p_id=>wwv_flow_api.id(3558708330553751922)
+ p_id=>wwv_flow_api.id(7764352865785508030)
 ,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Set Approved when Checked'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'if (nvl(:P61_IS_APPROVED, ''N'') = ''N'' and (:P61_APPROVED_BY is not null or :P61_APPROVED_ON is not null)) then',
+'    :P61_APPROVED_BY := null;',
+'    :P61_APPROVED_ON := null;',
+'elsif (nvl(:P61_IS_APPROVED, ''N'') = ''Y'' and (:P61_APPROVED_BY is null or :P61_APPROVED_ON is null)) then',
+'    :P61_APPROVED_BY := :APP_USER;',
+'    :P61_APPROVED_ON := sysdate;',
+'end if;'))
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when=>'SAVE,CREATE'
+,p_process_when_type=>'REQUEST_IN_CONDITION'
+);
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(3558708330553751922)
+,p_process_sequence=>30
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
 ,p_process_name=>'Store Expense Account Booking'
@@ -19241,10 +19442,12 @@ wwv_flow_api.create_page_process(
 '    end if;',
 'end;'))
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when=>'SAVE,CREATE'
+,p_process_when_type=>'REQUEST_IN_CONDITION'
 );
 wwv_flow_api.create_page_process(
  p_id=>wwv_flow_api.id(2822294058637033279)
-,p_process_sequence=>30
+,p_process_sequence=>40
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_FORM_PROCESS'
 ,p_process_name=>'Process Row of EXPENSE'
@@ -19258,7 +19461,7 @@ wwv_flow_api.create_page_process(
 );
 wwv_flow_api.create_page_process(
  p_id=>wwv_flow_api.id(2822294484511033280)
-,p_process_sequence=>40
+,p_process_sequence=>50
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_SESSION_STATE'
 ,p_process_name=>'reset page'
@@ -19268,7 +19471,7 @@ wwv_flow_api.create_page_process(
 );
 wwv_flow_api.create_page_process(
  p_id=>wwv_flow_api.id(3558708247376751921)
-,p_process_sequence=>50
+,p_process_sequence=>60
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_region_id=>wwv_flow_api.id(3558706803547751907)
 ,p_process_type=>'NATIVE_IG_DML'
@@ -19293,7 +19496,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181013215518'
+,p_last_upd_yyyymmddhh24miss=>'20181115112422'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3060566252222668037)
@@ -19321,168 +19524,6 @@ wwv_flow_api.create_page_plug(
 ,p_menu_id=>wwv_flow_api.id(21450353987106980779)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>wwv_flow_api.id(21450463408990980846)
-);
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(3193780299879540900)
-,p_plug_name=>'Account Balance'
-,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
-,p_plug_template=>wwv_flow_api.id(21450410513151980811)
-,p_plug_display_sequence=>20
-,p_plug_new_grid_row=>false
-,p_plug_display_point=>'BODY'
-,p_plug_source_type=>'NATIVE_JET_CHART'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
-);
-wwv_flow_api.create_jet_chart(
- p_id=>wwv_flow_api.id(3193780655243540901)
-,p_region_id=>wwv_flow_api.id(3193780299879540900)
-,p_chart_type=>'combo'
-,p_animation_on_display=>'auto'
-,p_animation_on_data_change=>'auto'
-,p_orientation=>'vertical'
-,p_data_cursor=>'auto'
-,p_data_cursor_behavior=>'auto'
-,p_hover_behavior=>'dim'
-,p_stack=>'off'
-,p_connect_nulls=>'Y'
-,p_sorting=>'label-asc'
-,p_fill_multi_series_gaps=>true
-,p_zoom_and_scroll=>'off'
-,p_tooltip_rendered=>'Y'
-,p_show_series_name=>true
-,p_show_group_name=>true
-,p_show_value=>true
-,p_show_label=>true
-,p_legend_rendered=>'off'
-,p_time_axis_type=>'enabled'
-);
-wwv_flow_api.create_jet_chart_series(
- p_id=>wwv_flow_api.id(3558709603173751935)
-,p_chart_id=>wwv_flow_api.id(3193780655243540901)
-,p_seq=>10
-,p_name=>'Income'
-,p_data_source_type=>'SQL'
-,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select trunc(BOOKING_ENTERED_DATE) BOOKING_DATE,',
-'       sum(ACCOUNT_BOOKING.AMOUNT) AMOUNT',
-'from ACCOUNT_BOOKING',
-'join ACCOUNT_BOOKING_TYPE on ACCOUNT_BOOKING_TYPE.ACCOUNT_BOOKING_TYPE_ID=ACCOUNT_BOOKING.ACCOUNT_BOOKING_TYPE_ID',
-'where ACCOUNT_BOOKING.ACCOUNT_ID=:P70_FILTER_ACCOUNT_ID and ACCOUNT_BOOKING_TYPE.IN_OUT_FACTOR > 0',
-'group by trunc(BOOKING_ENTERED_DATE)',
-'order by BOOKING_DATE'))
-,p_max_row_count=>20
-,p_series_type=>'bar'
-,p_items_value_column_name=>'AMOUNT'
-,p_items_label_column_name=>'BOOKING_DATE'
-,p_color=>'#0DB376'
-,p_line_style=>'solid'
-,p_line_width=>16
-,p_line_type=>'auto'
-,p_marker_rendered=>'auto'
-,p_marker_shape=>'auto'
-,p_assigned_to_y2=>'on'
-,p_items_label_rendered=>false
-);
-wwv_flow_api.create_jet_chart_series(
- p_id=>wwv_flow_api.id(3558709776662751936)
-,p_chart_id=>wwv_flow_api.id(3193780655243540901)
-,p_seq=>20
-,p_name=>'Withdraw'
-,p_data_source_type=>'SQL'
-,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select trunc(BOOKING_ENTERED_DATE) BOOKING_DATE,',
-'       sum(ACCOUNT_BOOKING.AMOUNT) AMOUNT',
-'from ACCOUNT_BOOKING',
-'join ACCOUNT_BOOKING_TYPE on ACCOUNT_BOOKING_TYPE.ACCOUNT_BOOKING_TYPE_ID=ACCOUNT_BOOKING.ACCOUNT_BOOKING_TYPE_ID',
-'where ACCOUNT_BOOKING.ACCOUNT_ID=:P70_FILTER_ACCOUNT_ID and ACCOUNT_BOOKING_TYPE.IN_OUT_FACTOR < 0',
-'group by trunc(BOOKING_ENTERED_DATE)',
-'order by BOOKING_DATE'))
-,p_max_row_count=>20
-,p_series_type=>'bar'
-,p_items_value_column_name=>'AMOUNT'
-,p_items_label_column_name=>'BOOKING_DATE'
-,p_color=>'#CF4E2D'
-,p_line_style=>'solid'
-,p_line_width=>8
-,p_line_type=>'centeredSegmented'
-,p_marker_rendered=>'auto'
-,p_marker_shape=>'auto'
-,p_assigned_to_y2=>'on'
-,p_items_label_rendered=>false
-);
-wwv_flow_api.create_jet_chart_series(
- p_id=>wwv_flow_api.id(3558709508959751934)
-,p_chart_id=>wwv_flow_api.id(3193780655243540901)
-,p_seq=>30
-,p_name=>'Balance'
-,p_data_source_type=>'SQL'
-,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select BOOKING_DATE, sum(AMOUNT) over (order by BOOKING_DATE) ACCOUNT_BALANCE',
-'from (select trunc(BOOKING_ENTERED_DATE) BOOKING_DATE,',
-'             sum(ACCOUNT_BOOKING.AMOUNT*ACCOUNT_BOOKING_TYPE.IN_OUT_FACTOR) AMOUNT',
-'      from ACCOUNT_BOOKING',
-'      join ACCOUNT_BOOKING_TYPE on ACCOUNT_BOOKING_TYPE.ACCOUNT_BOOKING_TYPE_ID=ACCOUNT_BOOKING.ACCOUNT_BOOKING_TYPE_ID',
-'      where ACCOUNT_BOOKING.ACCOUNT_ID=:P70_FILTER_ACCOUNT_ID',
-'      group by trunc(BOOKING_ENTERED_DATE))',
-'order by BOOKING_DATE'))
-,p_max_row_count=>20
-,p_series_type=>'line'
-,p_items_value_column_name=>'ACCOUNT_BALANCE'
-,p_items_label_column_name=>'BOOKING_DATE'
-,p_color=>'#3E80D1'
-,p_line_style=>'solid'
-,p_line_type=>'auto'
-,p_marker_rendered=>'auto'
-,p_marker_shape=>'auto'
-,p_assigned_to_y2=>'off'
-,p_items_label_rendered=>false
-);
-wwv_flow_api.create_jet_chart_axis(
- p_id=>wwv_flow_api.id(3193781738230540902)
-,p_chart_id=>wwv_flow_api.id(3193780655243540901)
-,p_axis=>'y'
-,p_is_rendered=>'on'
-,p_title=>'Account Balance'
-,p_format_type=>'decimal'
-,p_decimal_places=>0
-,p_format_scaling=>'auto'
-,p_scaling=>'linear'
-,p_baseline_scaling=>'zero'
-,p_position=>'auto'
-,p_major_tick_rendered=>'auto'
-,p_minor_tick_rendered=>'auto'
-,p_tick_label_rendered=>'on'
-);
-wwv_flow_api.create_jet_chart_axis(
- p_id=>wwv_flow_api.id(3193781179186540901)
-,p_chart_id=>wwv_flow_api.id(3193780655243540901)
-,p_axis=>'x'
-,p_is_rendered=>'on'
-,p_title=>'Date'
-,p_format_type=>'date-medium'
-,p_format_scaling=>'auto'
-,p_scaling=>'linear'
-,p_baseline_scaling=>'zero'
-,p_major_tick_rendered=>'auto'
-,p_minor_tick_rendered=>'auto'
-,p_tick_label_rendered=>'on'
-,p_tick_label_rotation=>'auto'
-,p_tick_label_position=>'outside'
-);
-wwv_flow_api.create_jet_chart_axis(
- p_id=>wwv_flow_api.id(3558709805392751937)
-,p_chart_id=>wwv_flow_api.id(3193780655243540901)
-,p_axis=>'y2'
-,p_is_rendered=>'on'
-,p_title=>'Income/Withdraw Volume'
-,p_format_scaling=>'auto'
-,p_scaling=>'linear'
-,p_baseline_scaling=>'zero'
-,p_position=>'auto'
-,p_major_tick_rendered=>'on'
-,p_minor_tick_rendered=>'off'
-,p_tick_label_rendered=>'on'
-,p_split_dual_y=>'auto'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3193782978623540904)
@@ -19690,11 +19731,699 @@ wwv_flow_api.create_jet_chart_series(
 ,p_items_max_value=>'VALUE'
 ,p_items_label_rendered=>false
 );
+wwv_flow_api.create_page_da_event(
+ p_id=>wwv_flow_api.id(3558708976071751928)
+,p_name=>'Refresh Chart'
+,p_event_sequence=>10
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P70_FILTER_ACCOUNT_ID'
+,p_bind_type=>'bind'
+,p_bind_event_type=>'change'
+);
+wwv_flow_api.create_page_da_action(
+ p_id=>wwv_flow_api.id(3558709235515751931)
+,p_event_id=>wwv_flow_api.id(3558708976071751928)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>'null;'
+,p_attribute_02=>'P70_FILTER_ACCOUNT_ID'
+,p_stop_execution_on_error=>'Y'
+,p_wait_for_result=>'Y'
+);
+end;
+/
+prompt --application/pages/page_00071
+begin
+wwv_flow_api.create_page(
+ p_id=>71
+,p_user_interface_id=>wwv_flow_api.id(21450484540660980861)
+,p_name=>'Accounts Overview'
+,p_step_title=>'Accounts Overview'
+,p_warn_on_unsaved_changes=>'N'
+,p_step_sub_title=>'Accounts Overview'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'FUCHSST@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20181116111811'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(7764353704369508039)
+,p_plug_name=>'Monthly Expenses by Account'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>30
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(7764353883261508040)
+,p_region_id=>wwv_flow_api.id(7764353704369508039)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'on'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'bottom'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(7764353979315508041)
+,p_chart_id=>wwv_flow_api.id(7764353883261508040)
+,p_seq=>10
+,p_name=>'New'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ACCOUNT.NAME ACCOUNT_NAME, trunc(AB.BOOKING_ENTERED_DATE, ''MM'') MONTH, sum(AB.AMOUNT/AB.EX_RATE)*-1 AMOUNT',
+'from V_ACCOUNT_BOOKING_EX_RATE AB',
+'join EXPENSE on AB.ACCOUNT_BOOKING_ID=EXPENSE.ACCOUNT_BOOKING_ID',
+'join ACCOUNT on AB.ACCOUNT_ID=ACCOUNT.ACCOUNT_ID',
+'where AB.BOOKING_ENTERED_DATE>=trunc(add_months(sysdate,-12), ''MM'')',
+'group by ACCOUNT.NAME, trunc(AB.BOOKING_ENTERED_DATE, ''MM'')'))
+,p_series_name_column_name=>'ACCOUNT_NAME'
+,p_items_value_column_name=>'AMOUNT'
+,p_items_label_column_name=>'MONTH'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(7764354058059508042)
+,p_chart_id=>wwv_flow_api.id(7764353883261508040)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(7764354183781508043)
+,p_chart_id=>wwv_flow_api.id(7764353883261508040)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'Amount (&P71_BASE_CURRENCY_SYMBOL.)'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_report_region(
+ p_id=>wwv_flow_api.id(9728522878221311784)
+,p_name=>'Account Balances'
+,p_template=>wwv_flow_api.id(21450410513151980811)
+,p_display_sequence=>10
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-Report--altRowsDefault:t-Report--rowHighlight'
+,p_display_point=>'BODY'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'SQL'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ACCOUNT.NAME, ',
+'       CURRENCY.SYMBOL CURRENCY_SYMBOL, ',
+'       BASE_CURRENCY.SYMBOL BASE_CURRENCY_SYMBOL,',
+'       sum(AB.AMOUNT) AMT_AVAILABLE, ',
+'       sum(AB.AMOUNT/AB.EX_RATE) AMT_AVAILABLE_IN_BASE_CRNCY,',
+'       sum(case when nvl(EXPENSE.IS_RESERVED,''N'')=''Y'' then AB.AMOUNT*-1 else 0 end) AMT_RESERVED, ',
+'       sum(case when nvl(EXPENSE.IS_RESERVED,''N'')=''Y'' then AB.AMOUNT/AB.EX_RATE*-1 else 0 end) AMT_RESERVED_IN_BASE_CRNCY,',
+'       sum(AB.AMOUNT)-sum(case when nvl(EXPENSE.IS_RESERVED,''N'')=''Y'' then AB.AMOUNT else 0 end) BALANCE, ',
+'       sum(AB.AMOUNT/AB.EX_RATE)-sum(case when nvl(EXPENSE.IS_RESERVED,''N'')=''Y'' then AB.AMOUNT/AB.EX_RATE else 0 end) BALANCE_IN_BASE_CURRENCY',
+'from V_ACCOUNT_BOOKING_EX_RATE AB',
+'join ACCOUNT on AB.ACCOUNT_ID=ACCOUNT.ACCOUNT_ID',
+'join CURRENCY on ACCOUNT.CURRENCY_ID=CURRENCY.CURRENCY_ID',
+'join PROJECT on ACCOUNT.PROJECT_ID=PROJECT.PROJECT_ID',
+'join CURRENCY BASE_CURRENCY on PROJECT.BASE_CURRENCY_ID=BASE_CURRENCY.CURRENCY_ID',
+'left join EXPENSE on AB.ACCOUNT_BOOKING_ID=EXPENSE.ACCOUNT_BOOKING_ID',
+'group by ACCOUNT.NAME, CURRENCY.SYMBOL, BASE_CURRENCY.SYMBOL',
+'order by ACCOUNT.NAME'))
+,p_ajax_enabled=>'Y'
+,p_query_row_template=>wwv_flow_api.id(21450434814007980827)
+,p_query_num_rows=>50
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_no_data_found=>'no data found'
+,p_query_row_count_max=>500
+,p_report_total_text_format=>'Total'
+,p_csv_output=>'N'
+,p_prn_output=>'N'
+,p_prn_format=>'PDF'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9728523221145311785)
+,p_query_column_id=>1
+,p_column_alias=>'NAME'
+,p_column_display_sequence=>1
+,p_column_heading=>'Name'
+,p_heading_alignment=>'LEFT'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9728523686586311786)
+,p_query_column_id=>2
+,p_column_alias=>'CURRENCY_SYMBOL'
+,p_column_display_sequence=>2
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9728524019981311787)
+,p_query_column_id=>3
+,p_column_alias=>'BASE_CURRENCY_SYMBOL'
+,p_column_display_sequence=>3
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(7764353447825508036)
+,p_query_column_id=>4
+,p_column_alias=>'AMT_AVAILABLE'
+,p_column_display_sequence=>5
+,p_column_heading=>'Available'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_html_expression=>'#CURRENCY_SYMBOL# #AMT_AVAILABLE#'
+,p_column_alignment=>'RIGHT'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(7764353538748508037)
+,p_query_column_id=>5
+,p_column_alias=>'AMT_AVAILABLE_IN_BASE_CRNCY'
+,p_column_display_sequence=>10
+,p_column_heading=>'Available (&P71_BASE_CURRENCY_SYMBOL.)'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_html_expression=>'#BASE_CURRENCY_SYMBOL# #AMT_AVAILABLE_IN_BASE_CRNCY#'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9728525224147311789)
+,p_query_column_id=>6
+,p_column_alias=>'AMT_RESERVED'
+,p_column_display_sequence=>6
+,p_column_heading=>'Reserved'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_html_expression=>'#CURRENCY_SYMBOL# #AMT_RESERVED#'
+,p_column_alignment=>'RIGHT'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(7764353387850508035)
+,p_query_column_id=>7
+,p_column_alias=>'AMT_RESERVED_IN_BASE_CRNCY'
+,p_column_display_sequence=>11
+,p_column_heading=>'Reserved (&P71_BASE_CURRENCY_SYMBOL.)'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_html_expression=>'#BASE_CURRENCY_SYMBOL# #AMT_RESERVED_IN_BASE_CRNCY#'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9728524431894311787)
+,p_query_column_id=>8
+,p_column_alias=>'BALANCE'
+,p_column_display_sequence=>7
+,p_column_heading=>'Balance'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_html_expression=>'#CURRENCY_SYMBOL# #BALANCE#'
+,p_column_alignment=>'RIGHT'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9728524835125311788)
+,p_query_column_id=>9
+,p_column_alias=>'BALANCE_IN_BASE_CURRENCY'
+,p_column_display_sequence=>12
+,p_column_heading=>'Balance (&P71_BASE_CURRENCY_SYMBOL.)'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_html_expression=>'#BASE_CURRENCY_SYMBOL# #BALANCE_IN_BASE_CURRENCY#'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(9728528295910311795)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(21450419933846980817)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_api.id(21450353987106980779)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_api.id(21450463408990980846)
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10125703068745984220)
+,p_plug_name=>'Exchange-Rate (including Fees)'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>50
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10125703830624984228)
+,p_region_id=>wwv_flow_api.id(10125703068745984220)
+,p_chart_type=>'line'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'off'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'bottom'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10125703960505984229)
+,p_chart_id=>wwv_flow_api.id(10125703830624984228)
+,p_seq=>10
+,p_name=>'Exchange-Rate (including Fees)'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select trunc(C.CONVERSION_DATE, ''MM'') MONTH, CP.NAME || '' ('' || C_FROM.NAME || '' -> '' || C_TO.NAME || '')'' PROVIDER, sum(AB_TO.AMOUNT-nvl(AB_FEE_TO.AMOUNT,0)) / sum(AB_FROM.AMOUNT+nvl(AB_FEE_FROM.AMOUNT,0)) EX_RATE_INCL_FEE',
+'from CONVERSION C',
+'join CONVERSION_PROVIDER CP on C.CONVERSION_PROVIDER_ID=CP.CONVERSION_PROVIDER_ID',
+'join ACCOUNT_BOOKING AB_FROM on C.FROM_ACCOUNT_BOOKING_ID=AB_FROM.ACCOUNT_BOOKING_ID',
+'join ACCOUNT A_FROM on AB_FROM.ACCOUNT_ID=A_FROM.ACCOUNT_ID',
+'join CURRENCY C_FROM on A_FROM.CURRENCY_ID=C_FROM.CURRENCY_ID',
+'join ACCOUNT_BOOKING AB_TO on C.TO_ACCOUNT_BOOKING_ID=AB_TO.ACCOUNT_BOOKING_ID',
+'join ACCOUNT A_TO on AB_TO.ACCOUNT_ID=A_TO.ACCOUNT_ID',
+'join CURRENCY C_TO on A_TO.CURRENCY_ID=C_TO.CURRENCY_ID',
+'left join EXPENSE EXP_FEE_FROM on C.FROM_FEE_EXPENSE_ID=EXP_FEE_FROM.EXPENSE_ID',
+'left join ACCOUNT_BOOKING AB_FEE_FROM on EXP_FEE_FROM.ACCOUNT_BOOKING_ID=AB_FEE_FROM.ACCOUNT_BOOKING_ID',
+'left join EXPENSE EXP_FEE_TO on C.TO_FEE_EXPENSE_ID=EXP_FEE_TO.EXPENSE_ID',
+'left join ACCOUNT_BOOKING AB_FEE_TO on EXP_FEE_TO.ACCOUNT_BOOKING_ID=AB_FEE_TO.ACCOUNT_BOOKING_ID',
+'where A_FROM.CURRENCY_ID<>A_TO.CURRENCY_ID',
+'group by trunc(C.CONVERSION_DATE, ''MM''), CP.NAME, C_FROM.NAME, C_TO.NAME'))
+,p_series_name_column_name=>'PROVIDER'
+,p_items_value_column_name=>'EX_RATE_INCL_FEE'
+,p_items_label_column_name=>'MONTH'
+,p_line_style=>'solid'
+,p_line_type=>'auto'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125704098209984230)
+,p_chart_id=>wwv_flow_api.id(10125703830624984228)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125704179439984231)
+,p_chart_id=>wwv_flow_api.id(10125703830624984228)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'Exchange Rate'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10125703167040984221)
+,p_plug_name=>'Fees by Method'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>40
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10125703280727984222)
+,p_region_id=>wwv_flow_api.id(10125703167040984221)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'off'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'bottom'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10125703399110984223)
+,p_chart_id=>wwv_flow_api.id(10125703280727984222)
+,p_seq=>10
+,p_name=>'Total Fees'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select trunc(EXPENSE.EXPENSE_DATE, ''MM'') MONTH, coalesce(CP_FROM.NAME,CP_TO.NAME, ''Donation '' || PM.NAME) PROVIDER, sum(ABER.AMOUNT_IN_BASE)*-1 AMOUNT',
+'from CONFIG_FEE_EXPENSE_TYPE CFET',
+'join EXPENDITURE_TYPE ET on CFET.EXPENDITURE_TYPE_ID=ET.EXPENDITURE_TYPE_ID',
+'join EXPENSE on ET.EXPENDITURE_TYPE_ID=EXPENSE.EXPENDITURE_TYPE_ID',
+'join V_ACCOUNT_BOOKING_EX_RATE ABER on EXPENSE.ACCOUNT_BOOKING_ID=ABER.ACCOUNT_BOOKING_ID',
+'left join CONVERSION C_FROM on EXPENSE.EXPENSE_ID=C_FROM.FROM_FEE_EXPENSE_ID',
+'left join CONVERSION_PROVIDER CP_FROM on C_FROM.CONVERSION_PROVIDER_ID=CP_FROM.CONVERSION_PROVIDER_ID',
+'left join CONVERSION C_TO on EXPENSE.EXPENSE_ID=C_TO.TO_FEE_EXPENSE_ID',
+'left join CONVERSION_PROVIDER CP_TO on C_TO.CONVERSION_PROVIDER_ID=CP_TO.CONVERSION_PROVIDER_ID',
+'left join RECEIVED_MONEY RM on EXPENSE.EXPENSE_ID=RM.FEE_EXPENSE_ID',
+'left join PAYMENT_METHOD PM on RM.PAYMENT_METHOD_ID=PM.PAYMENT_METHOD_ID',
+'where EXPENSE.EXPENSE_DATE>=add_months(trunc(sysdate, ''MM''),-12)',
+'group by trunc(EXPENSE.EXPENSE_DATE, ''MM''), coalesce(CP_FROM.NAME,CP_TO.NAME, ''Donation '' || PM.NAME)'))
+,p_series_name_column_name=>'PROVIDER'
+,p_items_value_column_name=>'AMOUNT'
+,p_items_label_column_name=>'MONTH'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125703748769984227)
+,p_chart_id=>wwv_flow_api.id(10125703280727984222)
+,p_axis=>'y2'
+,p_is_rendered=>'on'
+,p_title=>'Fees in % of Transaction Amount'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_split_dual_y=>'auto'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125703461967984224)
+,p_chart_id=>wwv_flow_api.id(10125703280727984222)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125703569281984225)
+,p_chart_id=>wwv_flow_api.id(10125703280727984222)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'Total Fees'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(13322041156003773050)
+,p_plug_name=>'Account Balance'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>20
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10128261121345232157)
+,p_region_id=>wwv_flow_api.id(13322041156003773050)
+,p_chart_type=>'combo'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'off'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10128264078668232164)
+,p_chart_id=>wwv_flow_api.id(10128261121345232157)
+,p_seq=>10
+,p_name=>'Income'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select trunc(BOOKING_ENTERED_DATE) BOOKING_DATE,',
+'       sum(ACCOUNT_BOOKING.AMOUNT) AMOUNT',
+'from ACCOUNT_BOOKING',
+'join ACCOUNT_BOOKING_TYPE on ACCOUNT_BOOKING_TYPE.ACCOUNT_BOOKING_TYPE_ID=ACCOUNT_BOOKING.ACCOUNT_BOOKING_TYPE_ID',
+'where ACCOUNT_BOOKING.ACCOUNT_ID=:P71_FILTER_ACCOUNT_ID and ACCOUNT_BOOKING_TYPE.IN_OUT_FACTOR > 0',
+'group by trunc(BOOKING_ENTERED_DATE)',
+'order by BOOKING_DATE'))
+,p_max_row_count=>20
+,p_series_type=>'bar'
+,p_items_value_column_name=>'AMOUNT'
+,p_items_label_column_name=>'BOOKING_DATE'
+,p_color=>'#0DB376'
+,p_line_style=>'solid'
+,p_line_width=>16
+,p_line_type=>'auto'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'on'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10128264697982232165)
+,p_chart_id=>wwv_flow_api.id(10128261121345232157)
+,p_seq=>20
+,p_name=>'Withdraw'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select trunc(BOOKING_ENTERED_DATE) BOOKING_DATE,',
+'       sum(ACCOUNT_BOOKING.AMOUNT) AMOUNT',
+'from ACCOUNT_BOOKING',
+'join ACCOUNT_BOOKING_TYPE on ACCOUNT_BOOKING_TYPE.ACCOUNT_BOOKING_TYPE_ID=ACCOUNT_BOOKING.ACCOUNT_BOOKING_TYPE_ID',
+'where ACCOUNT_BOOKING.ACCOUNT_ID=:P71_FILTER_ACCOUNT_ID and ACCOUNT_BOOKING_TYPE.IN_OUT_FACTOR < 0',
+'group by trunc(BOOKING_ENTERED_DATE)',
+'order by BOOKING_DATE'))
+,p_max_row_count=>20
+,p_series_type=>'bar'
+,p_items_value_column_name=>'AMOUNT'
+,p_items_label_column_name=>'BOOKING_DATE'
+,p_color=>'#CF4E2D'
+,p_line_style=>'solid'
+,p_line_width=>8
+,p_line_type=>'centeredSegmented'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'on'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10128263428119232162)
+,p_chart_id=>wwv_flow_api.id(10128261121345232157)
+,p_seq=>30
+,p_name=>'Balance'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select BOOKING_DATE, sum(AMOUNT) over (order by BOOKING_DATE) ACCOUNT_BALANCE',
+'from (select trunc(BOOKING_ENTERED_DATE) BOOKING_DATE,',
+'             sum(ACCOUNT_BOOKING.AMOUNT*ACCOUNT_BOOKING_TYPE.IN_OUT_FACTOR) AMOUNT',
+'      from ACCOUNT_BOOKING',
+'      join ACCOUNT_BOOKING_TYPE on ACCOUNT_BOOKING_TYPE.ACCOUNT_BOOKING_TYPE_ID=ACCOUNT_BOOKING.ACCOUNT_BOOKING_TYPE_ID',
+'      where ACCOUNT_BOOKING.ACCOUNT_ID=:P71_FILTER_ACCOUNT_ID',
+'      group by trunc(BOOKING_ENTERED_DATE))',
+'order by BOOKING_DATE'))
+,p_max_row_count=>20
+,p_series_type=>'line'
+,p_items_value_column_name=>'ACCOUNT_BALANCE'
+,p_items_label_column_name=>'BOOKING_DATE'
+,p_color=>'#3E80D1'
+,p_line_style=>'solid'
+,p_line_type=>'auto'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10128261649147232159)
+,p_chart_id=>wwv_flow_api.id(10128261121345232157)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'Account Balance'
+,p_format_type=>'decimal'
+,p_decimal_places=>0
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_zoom_order_seconds=>false
+,p_zoom_order_minutes=>false
+,p_zoom_order_hours=>false
+,p_zoom_order_days=>false
+,p_zoom_order_weeks=>false
+,p_zoom_order_months=>false
+,p_zoom_order_quarters=>false
+,p_zoom_order_years=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10128262211147232161)
+,p_chart_id=>wwv_flow_api.id(10128261121345232157)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Date'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10128262861915232161)
+,p_chart_id=>wwv_flow_api.id(10128261121345232157)
+,p_axis=>'y2'
+,p_is_rendered=>'on'
+,p_title=>'Income/Withdraw Volume'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_split_dual_y=>'auto'
+,p_zoom_order_seconds=>false
+,p_zoom_order_minutes=>false
+,p_zoom_order_hours=>false
+,p_zoom_order_days=>false
+,p_zoom_order_weeks=>false
+,p_zoom_order_months=>false
+,p_zoom_order_quarters=>false
+,p_zoom_order_years=>false
+);
 wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(3558708886816751927)
-,p_name=>'P70_FILTER_ACCOUNT_ID'
+ p_id=>wwv_flow_api.id(7764353603900508038)
+,p_name=>'P71_BASE_CURRENCY_SYMBOL'
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_api.id(3193780299879540900)
+,p_item_plug_id=>wwv_flow_api.id(9728522878221311784)
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select CURRENCY.SYMBOL',
+'from PROJECT',
+'join CURRENCY on PROJECT.BASE_CURRENCY_ID=CURRENCY.CURRENCY_ID',
+'where PROJECT.PROJECT_ID=:APP_PROJECT_ID'))
+,p_source_type=>'QUERY'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10128265265688232167)
+,p_name=>'P71_FILTER_ACCOUNT_ID'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(13322041156003773050)
 ,p_prompt=>'Account'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select min(ACCOUNT_ID)',
@@ -19719,35 +20448,1506 @@ wwv_flow_api.create_page_item(
 ,p_attribute_02=>'N'
 );
 wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(3558708976071751928)
-,p_name=>'Refresh Chart'
+ p_id=>wwv_flow_api.id(10125702088359984210)
+,p_name=>'OnFilterChange'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'ITEM'
-,p_triggering_element=>'P70_FILTER_ACCOUNT_ID'
+,p_triggering_element=>'P71_FILTER_ACCOUNT_ID'
 ,p_bind_type=>'bind'
 ,p_bind_event_type=>'change'
 );
 wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(3558709235515751931)
-,p_event_id=>wwv_flow_api.id(3558708976071751928)
+ p_id=>wwv_flow_api.id(10125702260372984212)
+,p_event_id=>wwv_flow_api.id(10125702088359984210)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
 ,p_attribute_01=>'null;'
-,p_attribute_02=>'P70_FILTER_ACCOUNT_ID'
+,p_attribute_02=>'P71_FILTER_ACCOUNT_ID'
 ,p_stop_execution_on_error=>'Y'
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(3558709091796751929)
-,p_event_id=>wwv_flow_api.id(3558708976071751928)
+ p_id=>wwv_flow_api.id(10125702171923984211)
+,p_event_id=>wwv_flow_api.id(10125702088359984210)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
-,p_execute_on_page_init=>'N'
+,p_execute_on_page_init=>'Y'
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_api.id(3193780299879540900)
+,p_affected_region_id=>wwv_flow_api.id(13322041156003773050)
+);
+end;
+/
+prompt --application/pages/page_00072
+begin
+wwv_flow_api.create_page(
+ p_id=>72
+,p_user_interface_id=>wwv_flow_api.id(21450484540660980861)
+,p_name=>'Kids Overview'
+,p_step_title=>'Kids Overview'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'FUCHSST@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20181116113053'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(7764354276447508044)
+,p_plug_name=>'Kids in Program'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(7764354303383508045)
+,p_region_id=>wwv_flow_api.id(7764354276447508044)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'on'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'auto'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(7764354498551508046)
+,p_chart_id=>wwv_flow_api.id(7764354303383508045)
+,p_seq=>10
+,p_name=>'Kids in Program'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select DATES.MONTH, GENDER.NAME GENDER, count(*) as NUM_KIDS',
+'from (select trunc(SYSDATE, ''MM'') as MONTH from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -1), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -2), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -3), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -4), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -5), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -6), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -7), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -8), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -9), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -10), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -11), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -12), ''MM'') from DUAL) DATES',
+'join KID_IN_PROGRAM on DATES.MONTH>=KID_IN_PROGRAM.IN_PROGRAM_FROM and ',
+'                       DATES.MONTH<=nvl(KID_IN_PROGRAM.IN_PROGRAM_TO, to_date(''31.12.9999'', ''DD.MM.YYYY''))',
+'join KID on KID_IN_PROGRAM.KID_ID=KID.KID_ID',
+'join GENDER on KID.GENDER_ID=GENDER.GENDER_ID',
+'group by DATES.MONTH, GENDER.NAME'))
+,p_series_name_column_name=>'GENDER'
+,p_items_value_column_name=>'NUM_KIDS'
+,p_items_label_column_name=>'MONTH'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(7764354520345508047)
+,p_chart_id=>wwv_flow_api.id(7764354303383508045)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(7764354608240508048)
+,p_chart_id=>wwv_flow_api.id(7764354303383508045)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'# Kids'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(7764354719501508049)
+,p_plug_name=>'Kids in School'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>20
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(7764354880022508050)
+,p_region_id=>wwv_flow_api.id(7764354719501508049)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'on'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'auto'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(9745180962369631201)
+,p_chart_id=>wwv_flow_api.id(7764354880022508050)
+,p_seq=>10
+,p_name=>'Kids in School'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select DATES.MONTH, SCHOOL_TYPE.NAME SCHOOL_TYPE, count(*) as NUM_KIDS',
+'from (select trunc(SYSDATE, ''MM'') as MONTH from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -1), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -2), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -3), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -4), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -5), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -6), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -7), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -8), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -9), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -10), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -11), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -12), ''MM'') from DUAL) DATES',
+'join KID_IN_PROGRAM on DATES.MONTH>=KID_IN_PROGRAM.IN_PROGRAM_FROM and ',
+'                       DATES.MONTH<=nvl(KID_IN_PROGRAM.IN_PROGRAM_TO, to_date(''31.12.9999'', ''DD.MM.YYYY''))',
+'join KID_SCHOOL_TERM_REF on KID_IN_PROGRAM.KID_IN_PROGRAM_ID=KID_SCHOOL_TERM_REF.KID_IN_PROGRAM_ID',
+'join SCHOOL_GRADE_TERM on KID_SCHOOL_TERM_REF.SCHOOL_GRADE_TERM_ID=SCHOOL_GRADE_TERM.SCHOOL_GRADE_TERM_ID and',
+'                          DATES.MONTH>=SCHOOL_GRADE_TERM.TERM_BEGIN and ',
+'                          DATES.MONTH<=nvl(SCHOOL_GRADE_TERM.TERM_END, to_date(''31.12.9999'', ''DD.MM.YYYY''))',
+'join SCHOOL_GRADE_REF on SCHOOL_GRADE_TERM.SCHOOL_GRADE_REF_ID=SCHOOL_GRADE_REF.SCHOOL_GRADE_REF_ID',
+'join GRADE on SCHOOL_GRADE_REF.GRADE_ID=GRADE.GRADE_ID',
+'join SCHOOL_TYPE on GRADE.SCHOOL_TYPE_ID=SCHOOL_TYPE.SCHOOL_TYPE_ID',
+'group by DATES.MONTH, SCHOOL_TYPE.NAME'))
+,p_series_name_column_name=>'SCHOOL_TYPE'
+,p_items_value_column_name=>'NUM_KIDS'
+,p_items_label_column_name=>'MONTH'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(9745181034314631202)
+,p_chart_id=>wwv_flow_api.id(7764354880022508050)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(9745181194329631203)
+,p_chart_id=>wwv_flow_api.id(7764354880022508050)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'# Kids'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(9742146838090501858)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(21450419933846980817)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_api.id(21450353987106980779)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_api.id(21450463408990980846)
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(9745181284278631204)
+,p_plug_name=>'Age Distribution'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>30
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(9745181332848631205)
+,p_region_id=>wwv_flow_api.id(9745181284278631204)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'on'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'auto'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(9745181462040631206)
+,p_chart_id=>wwv_flow_api.id(9745181332848631205)
+,p_seq=>10
+,p_name=>'Age Distribution'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select to_char(trunc(months_between(sysdate, KID.BIRTHDAY)/12), ''00'') AGE, GENDER.NAME GENDER, count(*) NUM_KIDS',
+'from KID_IN_PROGRAM',
+'join KID on KID_IN_PROGRAM.KID_ID=KID.KID_ID',
+'join GENDER on KID.GENDER_ID=GENDER.GENDER_ID',
+'where sysdate between KID_IN_PROGRAM.IN_PROGRAM_FROM and nvl(KID_IN_PROGRAM.IN_PROGRAM_TO, to_date(''31-12-9999'', ''DD-MM-YYYY''))',
+'group by trunc(months_between(sysdate, KID.BIRTHDAY)/12), GENDER.NAME',
+'order by 2, 1'))
+,p_series_name_column_name=>'GENDER'
+,p_items_value_column_name=>'NUM_KIDS'
+,p_items_label_column_name=>'AGE'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(9745181778435631209)
+,p_chart_id=>wwv_flow_api.id(9745181332848631205)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Age'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(9745181886084631210)
+,p_chart_id=>wwv_flow_api.id(9745181332848631205)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'# Kids'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(9745182471419631216)
+,p_plug_name=>'Kids per Region/School-Type'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>40
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select REGION.NAME REGION, SCHOOL_TYPE.NAME SCHOOL_TYPE, GENDER.NAME GENDER, count(*) as NUM_KIDS',
+'from KID_IN_PROGRAM',
+'join REGION on KID_IN_PROGRAM.REGION_ID=REGION.REGION_ID',
+'join KID on KID_IN_PROGRAM.KID_ID=KID.KID_ID',
+'join GENDER on KID.GENDER_ID=GENDER.GENDER_ID',
+'left join KID_SCHOOL_TERM_REF on KID_IN_PROGRAM.KID_IN_PROGRAM_ID=KID_SCHOOL_TERM_REF.KID_IN_PROGRAM_ID',
+'left join SCHOOL_GRADE_TERM on KID_SCHOOL_TERM_REF.SCHOOL_GRADE_TERM_ID=SCHOOL_GRADE_TERM.SCHOOL_GRADE_TERM_ID and ',
+'                               sysdate between SCHOOL_GRADE_TERM.TERM_BEGIN and ',
+'                               nvl(SCHOOL_GRADE_TERM.TERM_END, to_date(''31.12.9999'', ''DD.MM.YYYY''))    ',
+'left join SCHOOL_GRADE_REF on SCHOOL_GRADE_TERM.SCHOOL_GRADE_REF_ID=SCHOOL_GRADE_REF.SCHOOL_GRADE_REF_ID',
+'left join GRADE on SCHOOL_GRADE_REF.GRADE_ID=GRADE.GRADE_ID',
+'left join SCHOOL on SCHOOL_GRADE_REF.GRADE_ID=SCHOOL.SCHOOL_ID',
+'left join SCHOOL_TYPE on GRADE.SCHOOL_TYPE_ID=SCHOOL_TYPE.SCHOOL_TYPE_ID',
+'where sysdate between KID_IN_PROGRAM.IN_PROGRAM_FROM and ',
+'                       nvl(KID_IN_PROGRAM.IN_PROGRAM_TO, to_date(''31.12.9999'', ''DD.MM.YYYY''))                 ',
+'group by  REGION.NAME, SCHOOL_TYPE.NAME, GENDER.NAME'))
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_num_rows=>15
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(9745182915339631221)
+,p_region_id=>wwv_flow_api.id(9745182471419631216)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'none'
+,p_stack=>'on'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'auto'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(9745183059756631222)
+,p_chart_id=>wwv_flow_api.id(9745182915339631221)
+,p_seq=>10
+,p_name=>'Kids per Region/School-Type'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select nvl(SCHOOL_TYPE.NAME, ''/'') SCHOOL_TYPE, REGION.NAME || '' - '' || GENDER.NAME REGION_GENDER, count(*) as NUM_KIDS',
+'from KID_IN_PROGRAM',
+'join REGION on KID_IN_PROGRAM.REGION_ID=REGION.REGION_ID',
+'join KID on KID_IN_PROGRAM.KID_ID=KID.KID_ID',
+'join GENDER on KID.GENDER_ID=GENDER.GENDER_ID',
+'left join KID_SCHOOL_TERM_REF on KID_IN_PROGRAM.KID_IN_PROGRAM_ID=KID_SCHOOL_TERM_REF.KID_IN_PROGRAM_ID',
+'left join SCHOOL_GRADE_TERM on KID_SCHOOL_TERM_REF.SCHOOL_GRADE_TERM_ID=SCHOOL_GRADE_TERM.SCHOOL_GRADE_TERM_ID and ',
+'                               sysdate between SCHOOL_GRADE_TERM.TERM_BEGIN and ',
+'                               nvl(SCHOOL_GRADE_TERM.TERM_END, to_date(''31.12.9999'', ''DD.MM.YYYY''))    ',
+'left join SCHOOL_GRADE_REF on SCHOOL_GRADE_TERM.SCHOOL_GRADE_REF_ID=SCHOOL_GRADE_REF.SCHOOL_GRADE_REF_ID',
+'left join GRADE on SCHOOL_GRADE_REF.GRADE_ID=GRADE.GRADE_ID',
+'left join SCHOOL on SCHOOL_GRADE_REF.GRADE_ID=SCHOOL.SCHOOL_ID',
+'left join SCHOOL_TYPE on GRADE.SCHOOL_TYPE_ID=SCHOOL_TYPE.SCHOOL_TYPE_ID',
+'where sysdate between KID_IN_PROGRAM.IN_PROGRAM_FROM and ',
+'                      nvl(KID_IN_PROGRAM.IN_PROGRAM_TO, to_date(''31.12.9999'', ''DD.MM.YYYY''))                 ',
+'group by  REGION.NAME, SCHOOL_TYPE.NAME, GENDER.NAME'))
+,p_series_name_column_name=>'SCHOOL_TYPE'
+,p_items_value_column_name=>'NUM_KIDS'
+,p_items_label_column_name=>'REGION_GENDER'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(9745183162085631223)
+,p_chart_id=>wwv_flow_api.id(9745182915339631221)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Region/Gender'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(9745183282244631224)
+,p_chart_id=>wwv_flow_api.id(9745182915339631221)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'# Kids'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+end;
+/
+prompt --application/pages/page_00073
+begin
+wwv_flow_api.create_page(
+ p_id=>73
+,p_user_interface_id=>wwv_flow_api.id(21450484540660980861)
+,p_name=>'Expenditure Overview'
+,p_step_title=>'Expenditure Overview'
+,p_step_sub_title=>'Expenditure Overview'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'FUCHSST@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20181115110140'
+);
+wwv_flow_api.create_report_region(
+ p_id=>wwv_flow_api.id(9750982397461842344)
+,p_name=>'Monthly Income/Spending by Campaign'
+,p_template=>wwv_flow_api.id(21450410513151980811)
+,p_display_sequence=>10
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-Report--altRowsDefault:t-Report--rowHighlight'
+,p_display_point=>'BODY'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'SQL'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'with DATA as (',
+'                select CAMPAIGN.NAME CAMPAIGN, PURPOSE.NAME PURPOSE, EXPENSE_MONTH, IN_OUT, AMOUNT_IN_BASE',
+'                from (',
+'                      select trunc(EXPENSE.EXPENSE_DATE,''MM'') EXPENSE_MONTH, EXPENSE.CAMPAIGN_ID, ET.PURPOSE_ID, ''expense'' IN_OUT, sum(AB.AMOUNT_IN_BASE) AMOUNT_IN_BASE',
+'                      from EXPENSE',
+'                      join EXPENDITURE_TYPE ET on EXPENSE.EXPENDITURE_TYPE_ID=ET.EXPENDITURE_TYPE_ID',
+'                      join V_ACCOUNT_BOOKING_EX_RATE AB on EXPENSE.ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
+'                      where EXPENSE.EXPENSE_DATE>=add_months(trunc(sysdate,''MM''), -12)',
+'                      group by trunc(EXPENSE.EXPENSE_DATE,''MM''), EXPENSE.CAMPAIGN_ID, ET.PURPOSE_ID',
+'                      union all',
+'                      select trunc(RM.DONATION_DATE,''MM'') DONATION_MONTH, RM.CAMPAIGN_ID, RM.PURPOSE_ID, ''donation'', sum(AB.AMOUNT_IN_BASE) AMOUNT_IN_BASE',
+'                      from RECEIVED_MONEY RM',
+'                      join V_ACCOUNT_BOOKING_EX_RATE AB on RM.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
+'                      where RM.DONATION_DATE>=add_months(trunc(sysdate,''MM''), -12)',
+'                      group by trunc(RM.DONATION_DATE,''MM''), RM.CAMPAIGN_ID, RM.PURPOSE_ID',
+'                     ) BOOKING',
+'                join CAMPAIGN on BOOKING.CAMPAIGN_ID=CAMPAIGN.CAMPAIGN_ID',
+'                join PURPOSE on BOOKING.PURPOSE_ID=PURPOSE.PURPOSE_ID)',
+'select  CP.CAMPAIGN, CP.PURPOSE, CP.IN_OUT, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -12) then DATA.AMOUNT_IN_BASE end) M12, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -11) then DATA.AMOUNT_IN_BASE end) M11, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -10) then DATA.AMOUNT_IN_BASE end) M10, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -9) then DATA.AMOUNT_IN_BASE end) M09, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -8) then DATA.AMOUNT_IN_BASE end) M08, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -7) then DATA.AMOUNT_IN_BASE end) M07, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -6) then DATA.AMOUNT_IN_BASE end) M06, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -5) then DATA.AMOUNT_IN_BASE end) M05, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -4) then DATA.AMOUNT_IN_BASE end) M04, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -3) then DATA.AMOUNT_IN_BASE end) M03, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -2) then DATA.AMOUNT_IN_BASE end) M02, ',
+'        sum(case when DATA.EXPENSE_MONTH=add_months(trunc(sysdate,''MM''), -1) then DATA.AMOUNT_IN_BASE end) M01, ',
+'        sum(case when DATA.EXPENSE_MONTH<trunc(sysdate,''MM'') then DATA.AMOUNT_IN_BASE end)/12 MONTHLY_AVG_12M, ',
+'        sum(case when DATA.EXPENSE_MONTH=trunc(sysdate,''MM'') then DATA.AMOUNT_IN_BASE end) CUR_MONTH',
+'from (select * from (select distinct CAMPAIGN, PURPOSE from data), (select ''expense'' IN_OUT from dual union all select ''donation'' from dual)) CP',
+'left join DATA on CP.CAMPAIGN=DATA.CAMPAIGN and CP.PURPOSE=DATA.PURPOSE and CP.IN_OUT=DATA.IN_OUT',
+'group by CP.CAMPAIGN, CP.PURPOSE, CP.IN_OUT',
+'order by CP.CAMPAIGN, CP.PURPOSE, CP.IN_OUT'))
+,p_ajax_enabled=>'Y'
+,p_query_row_template=>wwv_flow_api.id(21450434814007980827)
+,p_query_num_rows=>100
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_break_cols=>'1'
+,p_query_no_data_found=>'no data found'
+,p_query_row_count_max=>500
+,p_report_total_text_format=>'Total'
+,p_break_type_flag=>'DEFAULT_BREAK_FORMATTING'
+,p_csv_output=>'N'
+,p_prn_output=>'N'
+,p_prn_format=>'PDF'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745183360144631225)
+,p_query_column_id=>1
+,p_column_alias=>'CAMPAIGN'
+,p_column_display_sequence=>1
+,p_column_heading=>'Campaign'
+,p_use_as_row_header=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745183489603631226)
+,p_query_column_id=>2
+,p_column_alias=>'PURPOSE'
+,p_column_display_sequence=>2
+,p_column_heading=>'Purpose'
+,p_use_as_row_header=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745183659950631228)
+,p_query_column_id=>3
+,p_column_alias=>'IN_OUT'
+,p_column_display_sequence=>3
+,p_column_heading=>'In Out'
+,p_use_as_row_header=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745183832140631230)
+,p_query_column_id=>4
+,p_column_alias=>'M12'
+,p_column_display_sequence=>4
+,p_column_heading=>'&P73_M12.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745183915585631231)
+,p_query_column_id=>5
+,p_column_alias=>'M11'
+,p_column_display_sequence=>5
+,p_column_heading=>'&P73_M11.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184044723631232)
+,p_query_column_id=>6
+,p_column_alias=>'M10'
+,p_column_display_sequence=>6
+,p_column_heading=>'&P73_M10.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184183522631233)
+,p_query_column_id=>7
+,p_column_alias=>'M09'
+,p_column_display_sequence=>7
+,p_column_heading=>'&P73_M09.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184299789631234)
+,p_query_column_id=>8
+,p_column_alias=>'M08'
+,p_column_display_sequence=>8
+,p_column_heading=>'&P73_M08.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184382474631235)
+,p_query_column_id=>9
+,p_column_alias=>'M07'
+,p_column_display_sequence=>9
+,p_column_heading=>'&P73_M07.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184499520631236)
+,p_query_column_id=>10
+,p_column_alias=>'M06'
+,p_column_display_sequence=>10
+,p_column_heading=>'&P73_M06.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184531316631237)
+,p_query_column_id=>11
+,p_column_alias=>'M05'
+,p_column_display_sequence=>11
+,p_column_heading=>'&P73_M05.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184672906631238)
+,p_query_column_id=>12
+,p_column_alias=>'M04'
+,p_column_display_sequence=>12
+,p_column_heading=>'&P73_M04.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184740069631239)
+,p_query_column_id=>13
+,p_column_alias=>'M03'
+,p_column_display_sequence=>13
+,p_column_heading=>'&P73_M03.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184881716631240)
+,p_query_column_id=>14
+,p_column_alias=>'M02'
+,p_column_display_sequence=>14
+,p_column_heading=>'&P73_M02.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745184955760631241)
+,p_query_column_id=>15
+,p_column_alias=>'M01'
+,p_column_display_sequence=>15
+,p_column_heading=>'&P73_M01.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745185390511631245)
+,p_query_column_id=>16
+,p_column_alias=>'MONTHLY_AVG_12M'
+,p_column_display_sequence=>16
+,p_column_heading=>'Monthly Avg. (12M)'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(9745185149348631243)
+,p_query_column_id=>17
+,p_column_alias=>'CUR_MONTH'
+,p_column_display_sequence=>17
+,p_column_heading=>'&P73_CUR_MONTH.'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_sum_column=>'Y'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(9750992255664842362)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(21450419933846980817)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_api.id(21450353987106980779)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_api.id(21450463408990980846)
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(9745185238440631244)
+,p_name=>'P73_CUR_MONTH'
+,p_item_sequence=>180
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(trunc(sysdate, ''MM''), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(9745185434556631246)
+,p_name=>'P73_M01'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -1), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(9745185516703631247)
+,p_name=>'P73_M06'
+,p_item_sequence=>110
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -6), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(9745185660852631248)
+,p_name=>'P73_M03'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -3), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(9745185789620631249)
+,p_name=>'P73_M05'
+,p_item_sequence=>90
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -5), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(9745185875797631250)
+,p_name=>'P73_M02'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -2), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701129437984201)
+,p_name=>'P73_M04'
+,p_item_sequence=>70
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -4), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701216848984202)
+,p_name=>'P73_M12'
+,p_item_sequence=>170
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -12), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701345170984203)
+,p_name=>'P73_M07'
+,p_item_sequence=>120
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -7), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701406307984204)
+,p_name=>'P73_M08'
+,p_item_sequence=>130
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -8), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701525789984205)
+,p_name=>'P73_M09'
+,p_item_sequence=>140
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -9), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701678423984206)
+,p_name=>'P73_M10'
+,p_item_sequence=>150
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -10), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(10125701754318984207)
+,p_name=>'P73_M11'
+,p_item_sequence=>160
+,p_item_plug_id=>wwv_flow_api.id(9750982397461842344)
+,p_source=>'to_char(add_months(trunc(sysdate, ''MM''), -11), ''MM/YYYY'')'
+,p_source_type=>'FUNCTION'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+end;
+/
+prompt --application/pages/page_00074
+begin
+wwv_flow_api.create_page(
+ p_id=>74
+,p_user_interface_id=>wwv_flow_api.id(21450484540660980861)
+,p_name=>'Donators Overview'
+,p_step_title=>'Donators Overview'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'FUCHSST@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20181116120101'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10204879548206628824)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(21450419933846980817)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_api.id(21450353987106980779)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_api.id(21450463408990980846)
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10204880167749628825)
+,p_plug_name=>'Active Donators'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10204880551198628826)
+,p_region_id=>wwv_flow_api.id(10204880167749628825)
+,p_chart_type=>'area'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'dim'
+,p_stack=>'on'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_title=>'is Long-Term-Sponsor'
+,p_legend_position=>'auto'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10204882247782628828)
+,p_chart_id=>wwv_flow_api.id(10204880551198628826)
+,p_seq=>10
+,p_name=>'Active Donators'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'with DATES as (select trunc(SYSDATE, ''MM'') as MONTH from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -1), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -2), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -3), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -4), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -5), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -6), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -7), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -8), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -9), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -10), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -11), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -12), ''MM'') from DUAL)',
+'select DATES.MONTH, ',
+'       case when exists (select 1 from KID_DONATOR_REF KDR ',
+'                         where KDR.DONATOR_ID=RECEIVED_MONEY.DONATOR_ID and DATES.MONTH between KDR.SPONSORED_FROM and nvl(KDR.SPONSORED_TO,to_date(''31-12-9999'', ''DD-MM-YYYY''))',
+'                        ) ',
+'            then ''Y'' ',
+'            else ''N''',
+'       end IS_LONG_TERM_SPONSOR,',
+'       count(distinct RECEIVED_MONEY.DONATOR_ID) as NUM_KIDS',
+'from DATES',
+'join RECEIVED_MONEY on RECEIVED_MONEY.DONATION_DATE between DATES.MONTH and add_months(DATES.MONTH,1)',
+'group by DATES.MONTH, case when exists (select 1 from KID_DONATOR_REF KDR ',
+'                                        where KDR.DONATOR_ID=RECEIVED_MONEY.DONATOR_ID and DATES.MONTH between KDR.SPONSORED_FROM and nvl(KDR.SPONSORED_TO,to_date(''31-12-9999'', ''DD-MM-YYYY''))',
+'                                       ) ',
+'                           then ''Y'' ',
+'                           else ''N''',
+'                      end '))
+,p_max_row_count=>20
+,p_series_name_column_name=>'IS_LONG_TERM_SPONSOR'
+,p_items_value_column_name=>'NUM_KIDS'
+,p_items_label_column_name=>'MONTH'
+,p_line_type=>'auto'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10204881056948628826)
+,p_chart_id=>wwv_flow_api.id(10204880551198628826)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10204881631652628828)
+,p_chart_id=>wwv_flow_api.id(10204880551198628826)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'# Donator'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10204882854379628829)
+,p_plug_name=>'Donators by Total Donation last 12 Months'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>20
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10204883283293628830)
+,p_region_id=>wwv_flow_api.id(10204882854379628829)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'auto'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10204883721560628830)
+,p_chart_id=>wwv_flow_api.id(10204883283293628830)
+,p_seq=>10
+,p_name=>'# Donators'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'',
+'',
+'with DONATIONS as (select RM.DONATOR_ID, sum(AB.AMOUNT) AMOUNT',
+'                   from RECEIVED_MONEY RM',
+'                   join V_ACCOUNT_BOOKING_EX_RATE AB on RM.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
+'                   where RM.DONATION_DATE>add_months(sysdate, -12)',
+'                   group by RM.DONATOR_ID)',
+'select DONATION_GROUP, count(DONATOR_ID) NUM_DONATORS, sum(AMOUNT) AMOUNT',
+'from (select case when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE)   then concat(''1: <='', to_char(GROUPS.STEP_SIZE))',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*2) then ''2: >'' || to_char(GROUPS.STEP_SIZE, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*2, ''FM9G999G999'')',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*3) then ''3: >'' || to_char(GROUPS.STEP_SIZE*2, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*3, ''FM9G999G999'')',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*4) then ''4: >'' || to_char(GROUPS.STEP_SIZE*3, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*4, ''FM9G999G999'')',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*5) then ''5: >'' || to_char(GROUPS.STEP_SIZE*4, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*5, ''FM9G999G999'')',
+'                  else ''6: >'' || to_char(GROUPS.STEP_SIZE*5, ''FM9G999G999'')',
+'             end as DONATION_GROUP,',
+'             DONATOR_ID, AMOUNT',
+'      from DONATIONS, (select round((median(amount)+stddev(AMOUNT)*2)/5, -1) STEP_SIZE from DONATIONS) GROUPS',
+'     )',
+'group by DONATION_GROUP',
+'order by 1'))
+,p_max_row_count=>20
+,p_items_value_column_name=>'NUM_DONATORS'
+,p_items_label_column_name=>'DONATION_GROUP'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>true
+,p_items_label_position=>'auto'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10125702527491984215)
+,p_chart_id=>wwv_flow_api.id(10204883283293628830)
+,p_seq=>20
+,p_name=>'Amount'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'',
+'with DONATIONS as (select RM.DONATOR_ID, sum(AB.AMOUNT) AMOUNT',
+'                   from RECEIVED_MONEY RM',
+'                   join V_ACCOUNT_BOOKING_EX_RATE AB on RM.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
+'                   where RM.DONATION_DATE>add_months(sysdate, -12)',
+'                   group by RM.DONATOR_ID)',
+'select DONATION_GROUP, count(DONATOR_ID) NUM_DONATORS, sum(AMOUNT) AMOUNT',
+'from (select case when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE)   then concat(''1: <='', to_char(GROUPS.STEP_SIZE))',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*2) then ''2: >'' || to_char(GROUPS.STEP_SIZE, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*2, ''FM9G999G999'')',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*3) then ''3: >'' || to_char(GROUPS.STEP_SIZE*2, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*3, ''FM9G999G999'')',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*4) then ''4: >'' || to_char(GROUPS.STEP_SIZE*3, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*4, ''FM9G999G999'')',
+'                  when (DONATIONS.AMOUNT<=GROUPS.STEP_SIZE*5) then ''5: >'' || to_char(GROUPS.STEP_SIZE*4, ''FM9G999G999'') || '' <='' || to_char(GROUPS.STEP_SIZE*5, ''FM9G999G999'')',
+'                  else ''6: >'' || to_char(GROUPS.STEP_SIZE*5, ''FM9G999G999'')',
+'             end as DONATION_GROUP,',
+'             DONATOR_ID, AMOUNT',
+'      from DONATIONS, (select round((median(amount)+stddev(AMOUNT)*2)/5, -1) STEP_SIZE from DONATIONS) GROUPS',
+'     )',
+'group by DONATION_GROUP',
+'order by 1'))
+,p_items_value_column_name=>'AMOUNT'
+,p_items_label_column_name=>'DONATION_GROUP'
+,p_assigned_to_y2=>'on'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125702316689984213)
+,p_chart_id=>wwv_flow_api.id(10204883283293628830)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Amount'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125702413509984214)
+,p_chart_id=>wwv_flow_api.id(10204883283293628830)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'# Donators'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10125702696771984216)
+,p_chart_id=>wwv_flow_api.id(10204883283293628830)
+,p_axis=>'y2'
+,p_is_rendered=>'on'
+,p_title=>'Amount'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'on'
+,p_minor_tick_rendered=>'off'
+,p_tick_label_rendered=>'on'
+,p_split_dual_y=>'auto'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10204884387458628830)
+,p_plug_name=>'Donations per Month'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>30
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10204884713560628831)
+,p_region_id=>wwv_flow_api.id(10204884387458628830)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'dim'
+,p_stack=>'on'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_title=>'Purpose'
+,p_legend_position=>'bottom'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10204886484168628832)
+,p_chart_id=>wwv_flow_api.id(10204884713560628831)
+,p_seq=>10
+,p_name=>'Donations per Month'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select trunc(RM.DONATION_DATE, ''MM'') MONTH, PURPOSE.NAME PURPOSE, CURRENCY.SYMBOL, sum(AB.AMOUNT_IN_BASE) as AMOUNT',
+'from RECEIVED_MONEY RM',
+'join V_ACCOUNT_BOOKING_EX_RATE AB on RM.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
+'join PURPOSE on RM.PURPOSE_ID=PURPOSE.PURPOSE_ID',
+'join (select C.SYMBOL from CURRENCY C join PROJECT P on C.CURRENCY_ID=P.BASE_CURRENCY_ID where P.PROJECT_ID=:APP_PROJECT_ID) CURRENCY on 1=1',
+'group by trunc(RM.DONATION_DATE, ''MM''), PURPOSE.NAME, CURRENCY.SYMBOL'))
+,p_max_row_count=>20
+,p_series_name_column_name=>'PURPOSE'
+,p_items_value_column_name=>'AMOUNT'
+,p_items_label_column_name=>'MONTH'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10204885254555628831)
+,p_chart_id=>wwv_flow_api.id(10204884713560628831)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10204885896978628831)
+,p_chart_id=>wwv_flow_api.id(10204884713560628831)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'Amount'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(10204887016486628832)
+,p_plug_name=>'% Fees per Donation by Payment-Method'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(21450410513151980811)
+,p_plug_display_sequence=>40
+,p_plug_new_grid_row=>false
+,p_plug_display_point=>'BODY'
+,p_plug_source_type=>'NATIVE_JET_CHART'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_jet_chart(
+ p_id=>wwv_flow_api.id(10204887454585628833)
+,p_region_id=>wwv_flow_api.id(10204887016486628832)
+,p_chart_type=>'line'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hide_and_show_behavior=>'none'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_legend_rendered=>'on'
+,p_legend_position=>'bottom'
+,p_time_axis_type=>'enabled'
+);
+wwv_flow_api.create_jet_chart_series(
+ p_id=>wwv_flow_api.id(10204889149179628834)
+,p_chart_id=>wwv_flow_api.id(10204887454585628833)
+,p_seq=>10
+,p_name=>'% Fees per Donation by Payment-Method'
+,p_data_source_type=>'SQL'
+,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select trunc(RM.DONATION_DATE, ''MM'') MONTH, PM.NAME PAYMENT_METHOD, sum(FEE_AB.AMOUNT_IN_BASE*-1) / sum(RM_AB.AMOUNT_IN_BASE) PCT',
+'from RECEIVED_MONEY RM',
+'left join PAYMENT_METHOD PM on RM.PAYMENT_METHOD_ID=PM.PAYMENT_METHOD_ID',
+'left join V_ACCOUNT_BOOKING_EX_RATE RM_AB on RM.RECEIVED_ACCOUNT_BOOKING_ID=RM_AB.ACCOUNT_BOOKING_ID',
+'join EXPENSE on RM.FEE_EXPENSE_ID=EXPENSE.EXPENSE_ID',
+'join V_ACCOUNT_BOOKING_EX_RATE FEE_AB on EXPENSE.ACCOUNT_BOOKING_ID=FEE_AB.ACCOUNT_BOOKING_ID',
+'where RM.DONATION_DATE>=add_months(trunc(sysdate, ''MM''),-12)',
+'group by trunc(RM.DONATION_DATE, ''MM''), PM.NAME'))
+,p_max_row_count=>20
+,p_series_name_column_name=>'PAYMENT_METHOD'
+,p_items_value_column_name=>'PCT'
+,p_items_label_column_name=>'MONTH'
+,p_line_style=>'solid'
+,p_line_type=>'auto'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10204887940597628834)
+,p_chart_id=>wwv_flow_api.id(10204887454585628833)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_title=>'Month'
+,p_format_type=>'date-short'
+,p_numeric_pattern=>'MM/yyyy'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_api.create_jet_chart_axis(
+ p_id=>wwv_flow_api.id(10204888532960628834)
+,p_chart_id=>wwv_flow_api.id(10204887454585628833)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_title=>'% Fees per Donation'
+,p_format_type=>'percent'
+,p_decimal_places=>1
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_api.create_page_button(
+ p_id=>wwv_flow_api.id(10125704252408984232)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_api.id(10204880167749628825)
+,p_button_name=>'ACTIVE_DONATORS_LIST'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_api.id(21450462642235980846)
+,p_button_image_alt=>'Active Donators List'
+,p_button_position=>'RIGHT_OF_TITLE'
+,p_button_redirect_url=>'f?p=&APP_ID.:741:&SESSION.::&DEBUG.:RP,741::'
+);
+end;
+/
+prompt --application/pages/page_00741
+begin
+wwv_flow_api.create_page(
+ p_id=>741
+,p_user_interface_id=>wwv_flow_api.id(21450484540660980861)
+,p_name=>'Active Donators'
+,p_page_mode=>'MODAL'
+,p_step_title=>'Active Donators'
+,p_step_sub_title=>'Active Donators'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'FUCHSST@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20181116121403'
+);
+wwv_flow_api.create_report_region(
+ p_id=>wwv_flow_api.id(10470615793377062202)
+,p_name=>'Report 1'
+,p_template=>wwv_flow_api.id(21450410513151980811)
+,p_display_sequence=>10
+,p_region_template_options=>'#DEFAULT#:t-Region--noPadding:t-Region--removeHeader:t-Region--noBorder:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-Report--altRowsDefault:t-Report--rowHighlight'
+,p_display_point=>'BODY'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'SQL'
+,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'with DATES as (select trunc(SYSDATE, ''MM'') as MONTH from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -1), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -2), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -3), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -4), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -5), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -6), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -7), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -8), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -9), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -10), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -11), ''MM'') from DUAL UNION ALL',
+'      select trunc(add_months(SYSDATE, -12), ''MM'') from DUAL)',
+'select DATA.MONTH, DATA.IS_LONG_TERM_SPONSOR, DATA.DONATOR_ID, DONATOR.DONATOR_NAME, sum(DATA.AMOUNT_IN_BASE) AMOUNT',
+'from (  select DATES.MONTH, ',
+'               case when exists (select 1 from KID_DONATOR_REF KDR ',
+'                                 where KDR.DONATOR_ID=RM.DONATOR_ID and DATES.MONTH between KDR.SPONSORED_FROM and nvl(KDR.SPONSORED_TO,to_date(''31-12-9999'', ''DD-MM-YYYY''))',
+'                                ) ',
+'                    then ''Y'' ',
+'                    else ''N''',
+'               end IS_LONG_TERM_SPONSOR,',
+'               RM.DONATOR_ID,',
+'               AB.AMOUNT_IN_BASE',
+'        from DATES',
+'        join RECEIVED_MONEY RM on RM.DONATION_DATE between DATES.MONTH and add_months(DATES.MONTH,1)',
+'        join V_ACCOUNT_BOOKING_EX_RATE AB on RM.RECEIVED_ACCOUNT_BOOKING_ID=AB.ACCOUNT_BOOKING_ID',
+'     ) DATA',
+'join DONATOR on DATA.DONATOR_ID=DONATOR.DONATOR_ID',
+'group by DATA.MONTH, DATA.IS_LONG_TERM_SPONSOR, DATA.DONATOR_ID, DONATOR.DONATOR_NAME',
+'order by DONATOR.DONATOR_NAME, DATA.MONTH'))
+,p_ajax_enabled=>'Y'
+,p_query_row_template=>wwv_flow_api.id(21450434814007980827)
+,p_query_num_rows=>500
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_break_cols=>'1'
+,p_query_no_data_found=>'no data found'
+,p_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_query_row_count_max=>500
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+,p_break_type_flag=>'DEFAULT_BREAK_FORMATTING'
+,p_csv_output=>'Y'
+,p_csv_output_link_text=>'Download'
+,p_prn_output=>'N'
+,p_prn_format=>'PDF'
+,p_sort_null=>'L'
+,p_plug_query_exp_filename=>'active_donators'
+,p_plug_query_exp_separator=>';'
+,p_plug_query_exp_enclosed_by=>'"'
+,p_plug_query_strip_html=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(10125704371155984233)
+,p_query_column_id=>1
+,p_column_alias=>'MONTH'
+,p_column_display_sequence=>3
+,p_column_heading=>'Month'
+,p_use_as_row_header=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(10125704421112984234)
+,p_query_column_id=>2
+,p_column_alias=>'IS_LONG_TERM_SPONSOR'
+,p_column_display_sequence=>4
+,p_column_heading=>'Is Long Term Sponsor'
+,p_use_as_row_header=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(10470616185340062205)
+,p_query_column_id=>3
+,p_column_alias=>'DONATOR_ID'
+,p_column_display_sequence=>1
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(10470616552846062206)
+,p_query_column_id=>4
+,p_column_alias=>'DONATOR_NAME'
+,p_column_display_sequence=>2
+,p_column_heading=>'Donator Name'
+,p_use_as_row_header=>'N'
+,p_column_link=>'f?p=&APP_ID.:11:&SESSION.::&DEBUG.:RP,11:P11_DONATOR_ID:#DONATOR_ID#'
+,p_column_linktext=>'#DONATOR_NAME#'
+,p_heading_alignment=>'LEFT'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_api.create_report_columns(
+ p_id=>wwv_flow_api.id(10125704574363984235)
+,p_query_column_id=>5
+,p_column_alias=>'AMOUNT'
+,p_column_display_sequence=>5
+,p_column_heading=>'Amount'
+,p_use_as_row_header=>'N'
+,p_column_format=>'999G999G999G999G999G999G990'
+,p_column_alignment=>'RIGHT'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
 );
 end;
 /
@@ -21268,7 +23468,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'FUCHSST@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20181011204812'
+,p_last_upd_yyyymmddhh24miss=>'20181115164020'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(2973570558742712514)
@@ -21393,7 +23593,7 @@ wwv_flow_api.create_interactive_grid(
 ,p_show_nulls_as=>'-'
 ,p_fixed_row_height=>true
 ,p_pagination_type=>'SCROLL'
-,p_show_total_row_count=>true
+,p_show_total_row_count=>false
 ,p_show_toolbar=>true
 ,p_toolbar_buttons=>'SAVE'
 ,p_enable_save_public_report=>false
@@ -28427,6 +30627,191 @@ wwv_flow_api.create_install_script(
 'insert into ACCOUNT_BOOKING_TYPE(name, code) values (''Conversion (fee)'', ''CONVERSION_FEE'');',
 'insert into ACCOUNT_BOOKING_TYPE(name, code) values (''Conversion (deposit)'', ''CONVERSION_DEPOSIT'');',
 'commit;',
+''))
+);
+end;
+/
+prompt --application/deployment/install/install_avg_ex_rate_params
+begin
+wwv_flow_api.create_install_script(
+ p_id=>wwv_flow_api.id(9720784268901997763)
+,p_install_id=>wwv_flow_api.id(70667951712543001)
+,p_name=>'avg_ex_rate_params'
+,p_sequence=>30
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'create type AVG_EX_RATE_PARAMS as object (',
+'  VALUE     number,',
+'  EX_RATE   number',
+');',
+''))
+);
+end;
+/
+prompt --application/deployment/install/install_avg_ex_rate_type
+begin
+wwv_flow_api.create_install_script(
+ p_id=>wwv_flow_api.id(9720842819910000974)
+,p_install_id=>wwv_flow_api.id(70667951712543001)
+,p_name=>'avg_ex_rate_type'
+,p_sequence=>40
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'create or replace type AVG_EX_RATE_TYPE as object (',
+'    TOTAL        number,',
+'    CUM_EX_RATE  number,',
+'',
+'    static function ODCIAggregateInitialize(SCTX in out AVG_EX_RATE_TYPE) return number,',
+'    member function ODCIAggregateIterate(SELF in out AVG_EX_RATE_TYPE, VALUE in AVG_EX_RATE_PARAMS) return number,',
+'    member function ODCIAggregateTerminate(SELF in AVG_EX_RATE_TYPE, RETURN_VALUE out number, FLAGS in number) return number,',
+'    member function ODCIAggregateMerge(SELF in out AVG_EX_RATE_TYPE, CTX2 in AVG_EX_RATE_TYPE) return number',
+');',
+''))
+);
+end;
+/
+prompt --application/deployment/install/install_avg_ex_rate_type_body
+begin
+wwv_flow_api.create_install_script(
+ p_id=>wwv_flow_api.id(9720854292084002757)
+,p_install_id=>wwv_flow_api.id(70667951712543001)
+,p_name=>'avg_ex_rate_type_body'
+,p_sequence=>50
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'create or replace type body AVG_EX_RATE_TYPE is',
+'    static function ODCIAggregateInitialize(SCTX in out AVG_EX_RATE_TYPE) return number',
+'    is',
+'    begin',
+'        SCTX := AVG_EX_RATE_TYPE( 0, null );',
+'        return ODCIConst.Success;',
+'    end;',
+'',
+'',
+'   member function ODCIAggregateIterate(SELF in out AVG_EX_RATE_TYPE, VALUE in AVG_EX_RATE_PARAMS) return number',
+'   is',
+'   begin',
+'      if (VALUE.EX_RATE is not null and (nvl(VALUE.VALUE,0) + nvl(SELF.TOTAL,0))>0) then',
+'        SELF.CUM_EX_RATE := ((nvl(VALUE.VALUE,0) * nvl(VALUE.EX_RATE,0)) + (nvl(SELF.TOTAL,0) * nvl(SELF.CUM_EX_RATE,0))) / (nvl(VALUE.VALUE,0) + nvl(SELF.TOTAL,0));',
+'      end if; ',
+'      SELF.TOTAL := nvl(VALUE.VALUE,0) + nvl(SELF.TOTAL,0);',
+'      return ODCIConst.Success;',
+'   end;',
+' ',
+'   member function ODCIAggregateTerminate(SELF in AVG_EX_RATE_TYPE, RETURN_VALUE out number, FLAGS in number) return number',
+'   is',
+'   begin',
+'       if (nvl(SELF.CUM_EX_RATE,0)>0) then',
+'           RETURN_VALUE := SELF.CUM_EX_RATE;',
+'       else',
+'           RETURN_VALUE := null;',
+'       end if;',
+'       return ODCIConst.Success;',
+'   end;',
+' ',
+'   member function ODCIAggregateMerge(SELF in out AVG_EX_RATE_TYPE, CTX2 in AVG_EX_RATE_TYPE) return number',
+'   is',
+'   begin',
+'       if (SELF.CUM_EX_RATE is not null and CTX2.CUM_EX_RATE is not null and (nvl(SELF.TOTAL,0) + nvl(CTX2.TOTAL,0)) > 0) then',
+'           SELF.CUM_EX_RATE := ((nvl(SELF.TOTAL,0) * nvl(SELF.CUM_EX_RATE,0)) + (nvl(CTX2.TOTAL,0) * nvl(CTX2.CUM_EX_RATE,0))) / (nvl(SELF.TOTAL,0) + nvl(CTX2.TOTAL,0));',
+'       elsif (CTX2.CUM_EX_RATE is not null and nvl(CTX2.TOTAL,0) > 0) then',
+'           SELF.CUM_EX_RATE := CTX2.CUM_EX_RATE;',
+'       end if;',
+'       SELF.TOTAL := nvl(SELF.TOTAL,0) + nvl(CTX2.TOTAL,0);',
+'       return ODCIConst.Success;',
+'   end;',
+' ',
+'end;',
+''))
+);
+end;
+/
+prompt --application/deployment/install/install_v_account_booking_ex_rate
+begin
+wwv_flow_api.create_install_script(
+ p_id=>wwv_flow_api.id(9724164272285176301)
+,p_install_id=>wwv_flow_api.id(70667951712543001)
+,p_name=>'v_account_booking_ex_rate'
+,p_sequence=>60
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'create or replace view V_ACCOUNT_BOOKING_EX_RATE as',
+'    select ACCOUNT.PROJECT_ID,',
+'           AB.ACCOUNT_BOOKING_ID,',
+'           AB.BOOKING_ENTERED_DATE, ',
+'           ABT.ACCOUNT_BOOKING_TYPE_ID, ',
+'           ACCOUNT.ACCOUNT_ID,',
+'           ACCOUNT.CURRENCY_ID,',
+'           AB.AMOUNT*ABT.IN_OUT_FACTOR AMOUNT,',
+'           case when PROJECT.PROJECT_ID is null then',
+'               avg_ex_rate(avg_ex_rate_params(AB.AMOUNT,case when AB_CONV_FROM.AMOUNT>0 then AB.AMOUNT/AB_CONV_FROM.AMOUNT end)) over (partition by ACCOUNT.CURRENCY_ID order by AB.BOOKING_ENTERED_DATE, AB.ACCOUNT_BOOKING_ID) ',
+'           else',
+'               1',
+'           end EX_RATE',
+'    from ACCOUNT_BOOKING AB',
+'    join ACCOUNT on AB.ACCOUNT_ID=ACCOUNT.ACCOUNT_ID',
+'    left join PROJECT on ACCOUNT.PROJECT_ID=PROJECT.PROJECT_ID and ACCOUNT.CURRENCY_ID=PROJECT.BASE_CURRENCY_ID',
+'    join ACCOUNT_BOOKING_TYPE ABT on AB.ACCOUNT_BOOKING_TYPE_ID=ABT.ACCOUNT_BOOKING_TYPE_ID',
+'    left join CONVERSION on AB.ACCOUNT_BOOKING_ID=CONVERSION.TO_ACCOUNT_BOOKING_ID',
+'    left join (select ACCOUNT_BOOKING.* ',
+'               from ACCOUNT_BOOKING ',
+'               join ACCOUNT on ACCOUNT_BOOKING.ACCOUNT_ID=ACCOUNT.ACCOUNT_ID',
+'               join PROJECT on ACCOUNT.PROJECT_ID=PROJECT.PROJECT_ID and ACCOUNT.CURRENCY_ID=PROJECT.BASE_CURRENCY_ID) AB_CONV_FROM on CONVERSION.FROM_ACCOUNT_BOOKING_ID=AB_CONV_FROM.ACCOUNT_BOOKING_ID',
+''))
+);
+end;
+/
+prompt --application/deployment/install/install_v_next_term_ref
+begin
+wwv_flow_api.create_install_script(
+ p_id=>wwv_flow_api.id(9724174008661181356)
+,p_install_id=>wwv_flow_api.id(70667951712543001)
+,p_name=>'v_next_term_ref'
+,p_sequence=>70
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'create or replace view V_NEXT_TERM_REF as',
+'with SCHOOL_GRADE_TERM_LU as (',
+'select SCHOOL_GRADE_TERM_ID, SCHOOL_ID, IS_BOARDING, GRADE_ID, GRADE_ORDER, GRADE, TERM_BEGIN, TERM_END, TERM, SCHOOL_YEAR, GRADE_RANK, TERM_RANK_IN_YEAR,',
+'       max(TERM_RANK_IN_YEAR) over (partition by SCHOOL_ID, IS_BOARDING) MAX_TERM_RANK_IN_YEAR',
+'from (',
+'select SCHOOL_GRADE_TERM.SCHOOL_GRADE_TERM_ID, ',
+'       SCHOOL_GRADE_REF.SCHOOL_ID, ',
+'       GRADE.IS_BOARDING, ',
+'       GRADE.GRADE_ID, ',
+'       GRADE.GRADE_ORDER, ',
+'       GRADE.NAME GRADE,',
+'       SCHOOL_GRADE_TERM.TERM_BEGIN, ',
+'       SCHOOL_GRADE_TERM.TERM_END, ',
+'       TERM.NAME TERM,',
+'       TERM.SCHOOL_YEAR,',
+'       dense_rank() over (partition by SCHOOL_GRADE_REF.SCHOOL_ID, GRADE.IS_BOARDING order by GRADE.GRADE_ORDER) GRADE_RANK,',
+'       rank() over (partition by SCHOOL_GRADE_REF.SCHOOL_ID, SCHOOL_GRADE_REF.GRADE_ID, GRADE.IS_BOARDING, TERM.SCHOOL_YEAR order by SCHOOL_GRADE_TERM.TERM_END) TERM_RANK_IN_YEAR',
+'',
+'from SCHOOL_GRADE_TERM',
+'join SCHOOL_GRADE_REF on SCHOOL_GRADE_TERM.SCHOOL_GRADE_REF_ID=SCHOOL_GRADE_REF.SCHOOL_GRADE_REF_ID',
+'join GRADE on SCHOOL_GRADE_REF.GRADE_ID=GRADE.GRADE_ID',
+'join TERM on SCHOOL_GRADE_TERM.TERM_ID=TERM.TERM_ID)',
+')',
+'select SGT_LU.SCHOOL_GRADE_TERM_ID, ',
+'       SGT_LU.SCHOOL_ID, ',
+'       SGT_LU.IS_BOARDING, ',
+'       SGT_LU.GRADE_ID, ',
+'       SGT_LU.GRADE,',
+'       SGT_LU.TERM_BEGIN, ',
+'       SGT_LU.TERM_END,  ',
+'       SGT_LU.TERM,',
+'       SGT_LU2.SCHOOL_GRADE_TERM_ID NEXT_SCHOOL_GRADE_TERM_ID, ',
+'       SGT_LU2.GRADE_ID NEXT_GRADE_ID, ',
+'       SGT_LU2.GRADE NEXT_GRADE,',
+'       SGT_LU2.TERM_BEGIN NEXT_TERM_BEGIN, ',
+'       SGT_LU2.TERM_END NEXT_TERM_END,',
+'       SGT_LU2.TERM NEXT_TERM',
+'from SCHOOL_GRADE_TERM_LU SGT_LU',
+'left join SCHOOL_GRADE_TERM_LU SGT_LU2 on SGT_LU.SCHOOL_ID=SGT_LU2.SCHOOL_ID and ',
+'                                          SGT_LU.IS_BOARDING=SGT_LU2.IS_BOARDING and',
+'                                          ((SGT_LU.SCHOOL_YEAR=SGT_LU2.SCHOOL_YEAR and SGT_LU.TERM_RANK_IN_YEAR+1=SGT_LU2.TERM_RANK_IN_YEAR and SGT_LU.GRADE_RANK=SGT_LU2.GRADE_RANK) or',
+'                                           (SGT_LU.SCHOOL_YEAR+1=SGT_LU2.SCHOOL_YEAR and SGT_LU2.TERM_RANK_IN_YEAR=1 and SGT_LU.GRADE_RANK+1=SGT_LU2.GRADE_RANK and SGT_LU.TERM_RANK_IN_YEAR=SGT_LU.MAX_TERM_RANK_IN_YEAR))',
 ''))
 );
 end;

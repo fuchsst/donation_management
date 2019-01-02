@@ -104,18 +104,34 @@ CREATE TABLE term (
 COMMENT ON TABLE term IS 'List of school terms (e.g. "Term 1 /2018")';
 
 
+CREATE SEQUENCE school_type_seq;
+
+
+CREATE TABLE school_type (
+  school_type_id  NUMBER DEFAULT ON NULL school_type_seq.NEXTVAL,
+  name            VARCHAR2(100) NOT NULL,
+  project_id      NUMBER NOT NULL,
+  CONSTRAINT school_type_pk PRIMARY KEY (school_type_id),
+  CONSTRAINT school_type_u1 UNIQUE (project_id, name),
+  CONSTRAINT school_type_f1 FOREIGN KEY (project_id) REFERENCES project(project_id)
+);
+COMMENT ON TABLE school_type IS 'List of school types (e.g. primary school)';
+
+
 CREATE SEQUENCE grade_seq;
 
 CREATE TABLE grade (
-  grade_id     NUMBER DEFAULT ON NULL grade_seq.NEXTVAL,
-  name         VARCHAR2(100) NOT NULL,
-  is_boarding  CHAR(1) DEFAULT 'N' NOT NULL,
-  grade_order  NUMBER NOT NULL,
-  project_id   NUMBER NOT NULL,
+  grade_id       NUMBER DEFAULT ON NULL grade_seq.NEXTVAL,
+  name           VARCHAR2(100) NOT NULL,
+  is_boarding    CHAR(1) DEFAULT 'N' NOT NULL,
+  grade_order    NUMBER NOT NULL,
+  project_id     NUMBER NOT NULL,
+  school_type_id NUMBER NOT NULL,
   CONSTRAINT grade_pk PRIMARY KEY (grade_id),
   CONSTRAINT grade_u1 UNIQUE (project_id, name),
   CONSTRAINT grade_c1 CHECK (is_boarding IN ('Y', 'N')),
-  CONSTRAINT grade_f1 FOREIGN KEY (project_id) REFERENCES project(project_id)
+  CONSTRAINT grade_f1 FOREIGN KEY (project_id) REFERENCES project(project_id),
+  CONSTRAINT grade_f2 FOREIGN KEY (school_type_id) REFERENCES school_type(school_type_id)
 );
 COMMENT ON TABLE grade IS 'List of school grades (e.g. "Primary 1"), incl. separate entries for boarding school classes';
 
@@ -469,6 +485,9 @@ CREATE TABLE expense (
   invoice_image           BLOB,
   invoice_image_mime      VARCHAR2(100),
   invoice_image_filename  VARCHAR2(255),
+  is_reserved             CHAR(1) DEFAULT 'N',
+  approved_by             VARCHAR2(30),
+  approved_on             TIMESTAMP DEFAULT SYSDATE,
   created_on              TIMESTAMP DEFAULT SYSDATE,
   created_by              VARCHAR2(30),
   updated_on              TIMESTAMP DEFAULT SYSDATE,
@@ -476,7 +495,8 @@ CREATE TABLE expense (
   CONSTRAINT expense_pk PRIMARY KEY (expense_id),
   CONSTRAINT expense_f1 FOREIGN KEY (expenditure_type_id) REFERENCES expenditure_type(expenditure_type_id),
   CONSTRAINT expense_f2 FOREIGN KEY (campaign_id) REFERENCES campaign(campaign_id),
-  CONSTRAINT expense_f3 FOREIGN KEY (account_booking_id) REFERENCES account_booking(account_booking_id)
+  CONSTRAINT expense_f3 FOREIGN KEY (account_booking_id) REFERENCES account_booking(account_booking_id),
+  CONSTRAINT expense_c1 CHECK (is_reserved IN ('N', 'Y'))
 );
 COMMENT ON TABLE expense IS 'Transactions of all expenses from local accounts. Optionally the number of units (e.g. kilogram when buying beans) can be stated';
 
@@ -576,6 +596,7 @@ CREATE TABLE conversion (
   to_account_booking_id          NUMBER NOT NULL,
   from_fee_expense_id            NUMBER,
   to_fee_expense_id              NUMBER,
+  main_purpose_id                NUMBER,
   conversion_receipt_image       BLOB,
   conversion_receipt_image_mime  VARCHAR2(100),
   conversion_receipt_image_fname VARCHAR2(255),
@@ -589,7 +610,8 @@ CREATE TABLE conversion (
   CONSTRAINT conversion_f2 FOREIGN KEY (from_account_booking_id) REFERENCES account_booking(account_booking_id),
   CONSTRAINT conversion_f3 FOREIGN KEY (to_account_booking_id) REFERENCES account_booking(account_booking_id),
   CONSTRAINT conversion_f4 FOREIGN KEY (from_fee_expense_id) REFERENCES expense(expense_id) ON DELETE SET NULL,
-  CONSTRAINT conversion_f5 FOREIGN KEY (to_fee_expense_id) REFERENCES expense(expense_id) ON DELETE SET NULL
+  CONSTRAINT conversion_f5 FOREIGN KEY (to_fee_expense_id) REFERENCES expense(expense_id) ON DELETE SET NULL,
+  CONSTRAINT conversion_f6 FOREIGN KEY (main_purpose_id) REFERENCES purpose(purpose_id)
 );
 COMMENT ON TABLE conversion IS 'Transactions of conversions from donation to local accounts.';
 
